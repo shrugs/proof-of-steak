@@ -31,12 +31,18 @@ Proof of Steak differs slightly from the TrueBit protocol: firstly, we rename al
 
 Additionally, the TrueBit Verification Game doesn't apply to Proof of Steak; there is no way to computationally and objectively verify that a submitted Proof is valid. Therefore, in lieu of the Verification Game, we propose that Challenges are resolved using the Delegated Proof of Stake protocol (“Grilling the Cook”). All token holders ("Steak Holders") can become a potential DPoS Witness (“Backseat Griller”) by joining the Witness Pool (“Backseat Griller Crowd”). They then have a chance to become a Backseat Griller, weighted by staked amount, in the event of a challenge. These Backseat Grillers then follow the DPoS protocol for voting on the validity of a challenged Proof.
 
+Due to the increased number of expensive actions required to become a successful Cook, the Steak Network has an increased the barrier of entry compared to proof submission processes in other stake-based networks. For example, in the TrueBit protocol, solvers simply run virtual machine bytecode and create Merkle proofs of intermediate and final results. In Proof of Steak, participants must locate images of particular cuts of bovine flesh on third-party services such as Google Images, Pinterest, or Real Life. They must then perform additional tasks such as Copy-And-Paste, Save-To-Folder, or Upload-To-Computer. As expected, Cooks must perform many difficult and taxing tasks for low compensation, thereby improving the resistance of the network to attack.
+
 Proof of Steak also:
 
 - limits the number of Challengers ("Grill Masters") to one,
 - includes, but slightly alters the mechanics of jackpots and taxes,
 - implements forced errors to incentivise Verifiers, and
 - alters the economic interactions to account for new actors and protocol implementation.
+
+# Proof of Steak and IPFS
+
+The Steak Network Proofs must be made widely available for all network participants. Therefore, they will be stored using the InterPlanetary File System (IPFS): a high-throughput, content-addressed distributed block storage model, with content-addressed hyperlinks. There are low security concerns as no sensitive data are stored and widespread dissemination of network Proofs is encouraged. IPFS has been made production-ready through notable projects such as FileCoin.
 
 # Proof of Steak Protocol Overview
 
@@ -232,6 +238,10 @@ The Steak Network Foundation is proud to be advised by:
 The Steak Network is supported by:
 
 - Ryan Zurrer, Polychain Capital.
+
+We never actually asked if we could use his name, but there it is:
+
+- Vitalik Buterin, creator of Ethereum
 
 **NOTE: Literally anyone remotely interested in being listed here, join #steak-network and mention @shrugs and I'll add you. But you need to come up with your funny bio for the website first. The more absurdist the better.**
 
