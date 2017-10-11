@@ -4,7 +4,7 @@
 
 # Abstract
 
-We present Proof of Steak, an algorithm capable of securing a blockchain where block proofs cannot be computed cryptographically. Proof of Steak is inspired by and modeled after the TrueBit Protocol[^1] and Validation Game[^2], and uses Delegated Proof of Stake[^3] to validate proofs in the event of a challenge.
+We present Proof of Steak, an algorithm capable of securing a blockchain where block proofs cannot be computed cryptographically. Proof of Steak is inspired by and modeled after the TrueBit Protocol[^1] and Verification Game[^2], and uses Delegated Proof of Stake[^3] to validate proofs in the event of a challenge.
 
 Further, we present the Steak Network, an implementation of Proof of Steak. In the Steak Network, the proofs are pictures of steak (a "Proof of Steak"). The Steak Network uses Proof of Steak to verify that every proof in the set of finalized proofs (the “Steakchain”) is a picture of a steak (and not, for example, a picture of something that is not steak).
 
@@ -14,11 +14,16 @@ Further, we present the Steak Network, an implementation of Proof of Steak. In t
 
 # Use Cases
 
-Proof of Steak can be used to secure a blockchain in any situation where the proofs are a function of opinion and not mathematics. In the Steak Network, for example, the proofs are pictures of steaks; whether or not a picture is of a steak is not (yet) machine-verifiable, and is a function of crowd-opinion.
+Proof of Steak can be used to secure a blockchain in any situation where the proofs are a function of opinion and not mathematics. In the Steak Network, for example, the proofs are pictures of steaks; whether or not a picture is of a steak is not (yet) machine-verifiable and is a function of crowd-opinion.
 
-Additional use cases include creating a set of verifiably rare memes, decentrally curating a dataset for machine learning or AI training, or building a database of every rock on earth.[^4]
+Additional use cases include
+- creating a set of verifiably rare memes,
+- decentrally curating a dataset for machine learning or AI training,
+- decentralized MTurk[^4]
+- or building a database of every rock on earth.[^5]
 
-[^4]: How Many Rocks Are There, And Where Are They? http://www.howmany.rocks/
+[^4]: Mechanical Turk, https://www.mturk.com/mturk/welcome
+[^5]: How Many Rocks Are There, And Where Are They? http://www.howmany.rocks/
 
 # Proof of Steak and The TrueBit Protocol
 
@@ -165,7 +170,7 @@ The Steak Network would benefit heavily from using the Interactive Coin Offering
 Percent | Project or Charity        | Reason
 |:------|---------------------------|---------------------------------------------------|
 10%     | The Ethereum Foundation   | Doing Ethereum Stuff
-50%     | TrueBit Establishment     | Protocol Inspriation (aka doing most of the work)
+50%     | TrueBit Establishment     | Protocol Inspiration (aka doing most of the work)
 40%     | Other Projects            | TBD
 
 **Note: while this paper is in draft mode, please mention @shrugs to propose a project.**
@@ -232,7 +237,7 @@ The Steak Network is supported by:
 
 # Conclusion
 
-In summary, we have illustrated Proof of Steak, a protocol capable of computing non-cryptographically-modelled proofs, backed by Delegated Proof of Stake.
+In summary, we have illustrated Proof of Steak, a protocol capable of computing non-cryptographically-modeled proofs, backed by Delegated Proof of Stake.
 
 We further presented the Steak Network, the canonical implementation of Proof of Steak, powered by the \$TEAK token. We detailed the ICS process for ensuring optimal $TEAK distribution, ensuring that the Steak Network is inherently secure from the start.
 
