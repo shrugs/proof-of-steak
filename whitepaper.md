@@ -227,7 +227,9 @@ The Proofs of Steak that you "heart" show up here, where you can add notes and g
 
 The Steak Network will also be integrated into Internet-of-Things Grills.
 
-We're unable to announce our strategic partnership just yet, but cooking steaks will never be a chore again, and you'll give it a score ten for good form and keeping steaks warm in.
+## Future Obstacles
+
+Note that due to the Steak Network's use of Proof of Steak, forks are not only possible, but highly encouraged. The Steak Network must also implement cutlery-based slashing conditions for disincentivizing Delegated Proof of Stake protocol violations.
 
 ## Advisors and Investors
 
@@ -255,6 +257,8 @@ We further presented the Steak Network, the canonical implementation of Proof of
 
 Jason Teutsch for his work on the TrueBit Protocol, as well as the Interactive Coin Offerings protocol.
 
-Robbie Bent, Harley Swick for valuable feedback.
+Wayne Chang for valuable additions, clarifications, and "fork" jokes.
+
+Robbie Bent, Harley Swick, Sina Habibian for valuable feedback.
 
 Dhruv Lutha for joining the Slack channel.
