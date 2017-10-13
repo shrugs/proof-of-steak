@@ -31,7 +31,7 @@ Proof of Steak differs slightly from the TrueBit protocol: firstly, we rename al
 
 Additionally, the TrueBit Verification Game doesn't apply to Proof of Steak; there is no way to computationally and objectively verify that a submitted Proof is valid. Therefore, in lieu of the Verification Game, we propose that Challenges are resolved using the Delegated Proof of Stake protocol (“Grilling the Cook”). All token holders ("Steak Holders") can become a potential DPoS Witness (“Backseat Griller”) by joining the Witness Pool (“Backseat Griller Crowd”). They then have a chance to become a Backseat Griller, weighted by staked amount, in the event of a challenge. These Backseat Grillers then follow the DPoS protocol for voting on the validity of a challenged Proof.
 
-Due to the increased number of expensive actions required to become a successful Cook, the Steak Network has an increased the barrier of entry compared to proof submission processes in other stake-based networks. For example, in the TrueBit protocol, solvers simply run virtual machine bytecode and create Merkle proofs of intermediate and final results. In Proof of Steak, participants must locate images of particular cuts of bovine flesh on third-party services such as Google Images, Pinterest, or Real Life. They must then perform additional tasks such as Copy-And-Paste, Save-To-Folder, or Upload-To-Computer. As expected, Cooks must perform many difficult and taxing tasks for low compensation, thereby improving the resistance of the network to attack.
+Due to the increased number of expensive actions required to become a successful Cook, the Steak Network has an increased the barrier of entry compared to proof submission processes in other stake-based networks. For example, in the TrueBit protocol, solvers simply run virtual machine bytecode and create Merkle proofs of intermediate and final results. In Proof of Steak, participants must locate images of particular cuts of bovine flesh on third-party services such as Google Images, Pinterest, or Real Life. They must then perform additional tasks such as Copy-And-Paste, Save-To-Folder, or Upload-To-Computer. Because Cooks must perform many difficult and taxing tasks for low compensation, the resistance of the network to attack is significantly improved.
 
 Proof of Steak also:
 
@@ -170,7 +170,7 @@ The Steak Network would benefit heavily from using the Interactive Coin Offering
 
 1. Literally just sending \$TEAK to anyone that gives us ETH, at an arbitrary valuation until it's all gone.
 2. Donating 100% the proceeds to the Ethereum Foundation and second-layer infrastructure projects.
-    - This follows Vitalik Buterin's pledge[^10] to donate advisor shares to charity and second-layer infrastrcuture.
+    - This follows Vitalik Buterin's pledge[^10] to donate advisor shares to charity and second-layer infrastructure.
     - Steak Network will also follow similar criteria for selecting second-layer projects.
 
 Percent | Project or Charity        | Reason
