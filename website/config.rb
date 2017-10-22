@@ -67,5 +67,20 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+
+  activate :favicon_maker do |f|
+    f.template_dir  = 'source/images'
+    f.icons = {
+      "steak-token.png" => [
+        { icon: "apple-touch-icon-180x180-precomposed.png" },
+        { icon: "apple-touch-icon-152x152-precomposed.png" },
+        { icon: "apple-touch-icon-144x144-precomposed.png" },
+        { icon: "apple-touch-icon-114x114-precomposed.png" },
+        { icon: "apple-touch-icon-72x72-precomposed.png" },
+        { icon: "favicon.png", size: "16x16" },
+        { icon: "favicon.ico", size: "64x64" },
+      ],
+    }
+  end
 end
 

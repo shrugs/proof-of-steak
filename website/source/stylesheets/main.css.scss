@@ -156,6 +156,10 @@ section {
   a {
     color: $secondary-color;
 
+    &:visited {
+      color: $secondary-color;
+    }
+
     &:hover {
       color: scale-color($secondary-color, $lightness: -14%);
     }
@@ -186,8 +190,18 @@ section {
     a {
       color: $primary-color;
 
+      &:visited {
+        color: $primary-color;
+      }
+
       &:hover {
         color: scale-color($primary-color, $lightness: -14%);
+      }
+    }
+
+    .cta-container {
+      a {
+        color: $secondary-color;
       }
     }
 
@@ -219,6 +233,7 @@ section {
 
   .button {
     display: block;
+    color: $primary-color;
   }
 
   .help-text {
