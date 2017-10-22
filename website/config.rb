@@ -50,6 +50,10 @@ helpers do
   def personal_address
     ENV['PERSONAL_ADDRESS']
   end
+
+  def ga_id
+    ENV['GA_ID']
+  end
 end
 
 configure :development do

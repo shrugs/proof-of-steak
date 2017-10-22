@@ -48,7 +48,11 @@
 
 @import '_angle';
 @import '_mixins';
+@import '_easter';
 
+body {
+  position: relative;
+}
 
 a {
   outline-width: 0;

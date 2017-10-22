@@ -1,5 +1,9 @@
 /* eslint-disable max-len */
 
+// importing jquery like i give a fuck
+import $ from 'jquery'
+
+import { doNyan, doSparks } from './nyan'
 import 'particles.js/particles.js'
 import particlesConfig from '../assets/particlesjs-config.json'
 import Chart from 'chart.js'
@@ -12,11 +16,11 @@ setTimeout(() => {
 new Chart(document.getElementById('ics-distribution'), {
   type: 'pie',
   data: {
-    labels: ['The Ethereum Foundation', 'The TrueBit Establishment', 'Anyone willing to build the Steak Network'],
+    labels: ['The Ethereum Foundation', 'The TrueBit Establishment', 'The Steak Network Bounty'],
     datasets: [{
       borderColor: '#f4f1de',
       backgroundColor: ['#ab544b', '#ad4d43', '#b3665d'],
-      data: [10, 50, 40],
+      data: [10, 70, 20],
     }],
   },
   options: {
@@ -35,6 +39,21 @@ new Chart(document.getElementById('ics-distribution'), {
   },
 })
 
+$('.easter-egg').on('click', () => {
+  const $outer = $('.egg-container-container-container')
+  const $container = $('.egg-container')
+  $outer.show()
+
+  document.getElementById('audio').play()
+
+  doNyan($('#nyan-cat'))
+  doSparks($container, $('.sparks-combo'))
+
+  setTimeout(() => {
+    $outer.append('<h2 class="lol">No, you can\'t stop this.</h2>')
+  }, 10000)
+})
+
 console.log(`
 
 
@@ -50,8 +69,8 @@ console.log(`
                                                                                                                                                       \`###
                                                                                                                                                      :###
                                                                                                                                                     '###
-                                                                                                                                                   +###
-                                                                                                                                                  ####
+           We're building some dope projects at TrueBit;                                                                                           +###
+              come hang out in slack and get involved :)                                                                                          ####
                                                                                                                                                  ####\`
                                                                                                                                                 ####,
                                                                                                                                                ####'

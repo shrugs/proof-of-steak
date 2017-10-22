@@ -32,6 +32,10 @@
   <% (current_page.data.css || []).each do |css| %>
     <%= stylesheet_link_tag css %>
   <% end %>
+
+  <% if build? and environment?(:production) %>
+    <%= partial 'partials/google_analytics' %>
+  <% end %>
 </head>
 
 <body class="<%= page_classes %>">
@@ -44,10 +48,6 @@
 
   <% (current_page.data.js || []).each do |js| %>
     <%= javascript_include_tag js, defer: true %>
-  <% end %>
-
-  <% if build? and environment?(:production) %>
-    <%= partial 'partials/google_analytics' %>
   <% end %>
 
 

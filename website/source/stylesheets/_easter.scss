@@ -1,0 +1,381 @@
+.easter-egg {
+  cursor: pointer;
+}
+
+.egg-container {
+  animation: woo 2000ms 0ms steps(3) infinite both;
+  animation-timing-function: linear;
+}
+
+.egg-container-container {
+  animation: lol 1000ms 0ms steps(3) infinite both;
+  animation-timing-function: linear;
+}
+
+.max-it {
+  height: 100%;
+  width: 100%;
+}
+
+.lol {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: auto;
+  background: #036;
+  z-index: 999;
+
+  display: none;
+}
+
+/* nyan cat! */
+#nyan-cat {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -97px;
+  z-index: 9999;
+
+  background-image: url(../images/steak-token.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  animation: woo 700ms 0ms steps(2) infinite both;
+  animation-timing-function: ease-in-out;
+}
+
+
+#nyan-cat.frame1 {
+  margin-top: -100px;
+}
+
+#nyan-cat.frame2 {
+  margin-top: -110px;
+}
+
+#nyan-cat.frame3 {
+  margin-top: -90px;
+}
+
+#nyan-cat.frame4 {
+  margin-top: -100px;
+}
+
+.sparks-combo {
+  height: 300px;
+  width: 200%;
+  position: relative;
+  animation: woosh 700ms 0ms linear infinite both;
+}
+.spark {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background: linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x;
+}
+.spark:before {
+  background: linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 5px, transparent 5px, transparent 400px) repeat-x;
+}
+.spark:after {
+  background: linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 6px, transparent 6px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 11px, transparent 11px, transparent 400px) repeat-x, linear-gradient(to right, white 0px, white 11px, transparent 11px, transparent 400px) repeat-x;
+}
+.spark:before,
+.spark:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.spark:nth-child(1) {
+  z-index: 3;
+  top: 0;
+  left: 20px;
+  animation: sparkly 700ms 0ms steps(1) infinite both;
+}
+.spark:nth-child(1):before {
+  animation: sparkly-before 700ms 0ms steps(1) infinite both;
+}
+.spark:nth-child(1):after {
+  animation: sparkly-after 700ms 0ms steps(1) infinite both;
+}
+.spark:nth-child(2) {
+  top: 40px;
+  left: 170px;
+  animation: sparkly 700ms 200ms steps(1) infinite both;
+}
+.spark:nth-child(2):before {
+  animation: sparkly-before 700ms 200ms steps(1) infinite both;
+}
+.spark:nth-child(2):after {
+  animation: sparkly-after 700ms 200ms steps(1) infinite both;
+}
+.spark:nth-child(3) {
+  top: 100px;
+  left: 320px;
+  animation: sparkly 700ms 400ms steps(1) infinite both;
+}
+.spark:nth-child(3):before {
+  animation: sparkly-before 700ms 400ms steps(1) infinite both;
+}
+.spark:nth-child(3):after {
+  animation: sparkly-after 700ms 400ms steps(1) infinite both;
+}
+.spark:nth-child(4) {
+  top: 150px;
+  left: 200px;
+  animation: sparkly 700ms 600ms steps(1) infinite both;
+}
+.spark:nth-child(4):before {
+  animation: sparkly-before 700ms 600ms steps(1) infinite both;
+}
+.spark:nth-child(4):after {
+  animation: sparkly-after 700ms 600ms steps(1) infinite both;
+}
+@keyframes woosh {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -400px;
+  }
+}
+@keyframes sparkly {
+  0% {
+    background-size: 400px 6px, 0 0, 0 0, 0 0;
+    background-position: 17px 17px, 0 0, 0 0, 0 0;
+  }
+  16% {
+    background-size: 400px 6px, 400px 6px, 400px 6px, 400px 6px;
+    background-position: 17px 0, 34px 17px, 17px 34px, 0 17px;
+  }
+  33% {
+    background-size: 400px 6px, 400px 6px, 400px 6px, 400px 6px;
+    background-position: 17px 0, 34px 17px, 17px 34px, 0 17px;
+  }
+  50% {
+    background-size: 400px 6px, 0 0, 0 0, 0 0;
+    background-position: 17px 17px, 0 0, 0 0, 0 0;
+  }
+  66% {
+    background-size: 400px 11px, 400px 11px, 0 0, 0 0;
+    background-position: 17px 6px, 17px 23px, 0 0, 0 0;
+  }
+  83% {
+    background-size: 0 0, 0 0, 400px 5px, 400px 5px;
+    background-position: 0 0, 0 0, 11px 17px, 22px 17px;
+  }
+  100% {
+    background-size: 400px 6px, 0 0, 0 0, 0 0;
+    background-position: 17px 17px, 0 0, 0 0, 0 0;
+  }
+}
+@keyframes sparkly-before {
+  0% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  16% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  33% {
+    background-size: 400px 5px, 400px 5px, 400px 5px, 400px 5px;
+    background-position: 6px 6px, 29px 6px, 29px 29px, 6px 29px;
+  }
+  50% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  66% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  83% {
+    background-size: 0 0, 0 0, 400px 5px, 400px 5px;
+    background-position: 0 0, 0 0, 17px 12px, 17px 22px;
+  }
+  100% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+}
+@keyframes sparkly-after {
+  0% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  16% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  33% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-size: 400px 11px, 400px 11px, 400px 6px, 400px 6px;
+    background-position: 17px 0, 17px 29px, 0 17px, 29px 17px;
+  }
+  66% {
+    background-size: 0 0, 0 0, 400px 6px, 400px 6px;
+    background-position: 0 0, 0 0, 6px 17px, 23px 17px;
+  }
+  83% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-size: 0 0, 0 0, 0 0, 0 0;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+}
+.rainbow {
+  background: none;
+  height: 102px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-right: 45px;
+  z-index: 2;
+}
+.hot:after,
+.hot:before,
+.cold:after,
+.cold:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+}
+.hot:after,
+.hot:before {
+  top: 0;
+}
+.cold:after,
+.cold:before {
+  bottom: 0;
+}
+#wave-a {
+  margin-top: -54px;
+  animation: wavy 700ms 0ms steps(2) infinite both;
+}
+#wave-b {
+  margin-top: -60px;
+  animation: wavy 700ms 350ms steps(2) infinite both;
+}
+/* red */
+.hot {
+  background-image: linear-gradient(to right, #ff0000 49px, transparent 49px, transparent 92px);
+}
+/* orange */
+.hot:after {
+  background-image: linear-gradient(to right, #ff9900 49px, transparent 49px, transparent 92px);
+}
+/* yellow */
+.hot:before {
+  background-image: linear-gradient(to right, #ffff00 49px, transparent 49px, transparent 92px);
+}
+/* green */
+.cold:after {
+  background-image: linear-gradient(to right, #33ff00 49px, transparent 49px, transparent 92px);
+  background-position: left top;
+}
+/* blue */
+.cold:before {
+  background-image: linear-gradient(to right, #0099ff 49px, transparent 49px, transparent 92px);
+}
+/* purple */
+.cold {
+  background-image: linear-gradient(to right, #6633ff 49px, transparent 49px, transparent 92px);
+}
+.rainbow,
+.hot:after,
+.hot:before,
+.cold:after,
+.cold:before {
+  background-size: 95px 17px;
+  background-repeat: repeat-x;
+}
+#wave-a.hot,
+#wave-a.cold:after {
+  background-position: left top;
+}
+#wave-a.hot:after,
+#wave-a.cold:before {
+  background-position: left center;
+}
+#wave-a.hot:before,
+#wave-a.cold {
+  background-position: left bottom;
+}
+#wave-b.hot,
+#wave-b.cold:after {
+  background-position: 46px top;
+}
+#wave-b.hot:after,
+#wave-b.cold:before {
+  background-position: 46px center;
+}
+#wave-b.hot:before,
+#wave-b.cold {
+  background-position: 46px bottom;
+}
+@keyframes wavy {
+  0% {
+    margin-top: -54px;
+  }
+  100% {
+    margin-top: -60px;
+  }
+}
+
+@keyframes woo {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+@keyframes lol {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
