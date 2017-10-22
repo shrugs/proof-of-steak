@@ -1,0 +1,416 @@
+<div id="hero" class="hero">
+    <div class="hero-header show-for-medium">
+        <div class="row">
+            <a target="_blank" href="/assets/steak-network_whitepaper.pdf">whitepaper</a>
+            <a href="#what-is-steak-network">About</a>
+            <a href="#steak-token">$TEAK</a>
+            <a href="#ico">ICO</a>
+            <a href="#team">team</a>
+            <a href="#investors">investors</a>
+            <a href="#advisors">advisors</a>
+            <a href="#support">support</a>
+        </div>
+    </div>
+    <div class="hero-content">
+        <div class="row max align-middle align-center">
+            <div class="columns">
+                <h2>
+                    <span class="tiny-header">using</span>
+                </h2>
+                <h2>Proof of Stake
+                    <span class="tiny-header">to secure</span>
+                </h2>
+                <h1>Proofs of Steak</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="what-is-steak-network" class="primary">
+    <div class="row align-center">
+        <div class="small-12 columns">
+            <h3>What is the Steak Network?</h3>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-12 columns">
+            <div class="row">
+                <div class="small-12 medium-6 columns">
+                    <img src="https://via.placeholder.com/500x500" alt="network illustration">
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <p>
+                        Decentralized networks are a rare medium well-done.
+                    </p>
+                    <p>
+                        We present the
+                        <b>Steak Network</b>, a decentralized social network of Steak enthusiasts built on top of Ethereum.
+                        The core feature of the Steak Network is the
+                        <b>Steakchain</b>, a set of validated, user-submitted
+                        <b>Proofs of Steak</b>. The network defends itself against malicious attacks using
+                        <b>Proof of Steak</b>, a novel protocol capable of securing a blockchain given proofs that cannot be
+                        computed cryptographically, backed by
+                        <b>TrueBit</b> and a
+                        <b>Proof of Stake</b> protocol.
+                    </p>
+                    <p>
+                        Using the Steak Network, users can trustlessly share Proof of Steak, knowing for certain that the Steakchain is exclusively
+                        made up of verifiably rare (or medium-rare) pictures of steak.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= partial 'partials/whitepaper_cta', locals: { sub: '(yes, the whitepaper is legit)', button_type: 'secondary' } %>
+</section>
+
+<section id="how-it-works" class="inverse">
+    <div class="row align-center">
+        <div class="small-11 medium-10 columns">
+            <h3>
+                <span class="icon">📡</span> How does it work?
+            </h3>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-11 medium-10 columns">
+            <div class="row medium-flex-dir-row-reverse">
+                <div class="small-12 medium-6 columns">
+                    <img src="https://via.placeholder.com/500x500" alt="network illustration">
+                </div>
+                <div class="small-12 medium-6 columns">
+                    <p>
+                        Any token holder is considered a member of the
+                        <b>Steak Network</b>. At any point in time, a network member may become
+                        <b>Cook</b> by submitting a
+                        <b>Proof of Steak*</b>. This transaction then goes through a verification phase modeled after
+                        <a href="https://truebit.org">TrueBit's Verification Game</a>.
+                    </p>
+                    <p>
+                        During the validation phase, any token holder may become
+                        <b>Grill Master</b> by challenging the validity of a Cook's Proof of Steak. If a challenge by a Grill
+                        Master is made, the Grilling of the Cook (verification game) begins. If no challenge is made by the
+                        end of the validation phase, the Proof of Steak is considered genuine and is then finalized, recorded
+                        forever in the Steakchain.
+                    </p>
+                    <h4>
+                        <span class="icon">🎲</span>The Grilling of the Cook</h4>
+                    <p>
+                        If a challenge by a Grill Master is made, the Grilling of the Cook determines whether or not a Proof of Steak is valid. In
+                        TrueBit's Verification Game, arbitrary computation must be iteratively validated, but because the
+                        Steak Network is only concerned with verifying the validity of Proofs of Steak, we can simplify the
+                        model considerably.
+                    </p>
+                    <p>
+                        The Steak Network elects Backseat Grillers (witnesses), following Proof of Stake semantics, who then have the right to vouch
+                        for the validity or invalidity of a Proof of Steak. After a witness timeout period, the votes are
+                        tallied, and the winner is determined.
+                    </p>
+                    <h4>
+                        <span class="icon">❗</span>Forced Errors</h4>
+                    <p>
+                        The Steak Network also implement's TrueBit's Forced Errors logic to incentivize proof challenges. In the case of a forced
+                        error, the game mechanics are inverted: a Cook submits an invalid Proof of Steak and Grill Masters
+                        are rewarded by a jackpot for sucessfully challenging the Cook. Because of the jackpot payouts, network
+                        participants are financially incentivized to be on the watch for invalid Proofs of Steak.
+                    </p>
+                    <p>
+                        * A
+                        <b>Proof of Steak</b> is just a picture of a steak
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= partial 'partials/whitepaper_cta', locals: { sub: '(please, I put a lot of work into it)', button_type: 'primary' } %>
+</section>
+
+<section id="steak-token" class="primary">
+    <div class="row align-center">
+        <%= image_tag 'steak-token.png', class: 'rounded steak-token', alt: 'The $TEAK Token' %>
+    </div>
+    <div class="row align-center sub-header-container">
+        <div class="small-10 columns">
+            <h3 class="text-center">
+                The $TEAK Token
+            </h3>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-11 medium-8 columns">
+            <h4>
+                <span class="icon">🍖</span>$TEAK Holders are Stake Holders
+            </h4>
+            <p>
+                $TEAK Holders are stake holders in the Steak Network and are granted membership. They have the ability to become Cook by
+                submitting Proof of Steak transactions to the network, as well as the ability to become Grill Master and
+                challenge Cook's Proofs of Steak.
+            </p>
+
+            <h4>
+                <span class="icon">⏳</span>Certifiably Rare
+            </h4>
+            <p>
+                There is a fixed amount of $TEAK; the tokens you own are certifiably rare, since no more than 975,220,000,000 will ever be
+                created.
+            </p>
+
+            <h4>
+                <span class="icon">🔥</span>$TEAK Can Be Burned
+            </h4>
+            <p>
+                Just like real life, if a Cook or Grill Master behaves badly, their $TEAK can be burned. The end result of the Verification
+                Game results in the malicious party's $TEAK being burned. The Steak Network uses Byzantine Proof of Stake
+                to solve the "Nothing at Stake" problem; when Backseat Grillers vouch for a Proof of Steak, they burn $TEAK
+                in the Steakchains that do not include the Proof of Steak in question. This is implemented as a knife-based
+                slashing system.
+            </p>
+
+            <h4>
+                <span class="icon">🍳</span>Become Cook
+            </h4>
+            <p>
+                Any $TEAK Holder may become Cook by submitting a Proof of Steak and staking $TEAK on its validity. If a Cook behaves correctly,
+                their Proof of Steak is validated and added to the Steakchain. If a Cook's Proof of Steak is challenged and
+                the Cook is the loser of the Verification Game, their $TEAK is burned.
+            </p>
+
+            <h4>
+                <span class="icon">🔨</span>Become Grill Master
+            </h4>
+            <p>
+                Any $TEAK Holder may become Grill Master by challenging a Cook's Proof of Steak and staking $TEAK on its invalidity. If the
+                Grill Master is the winner of the Verification Game under normal conditions, they receive a small payout,
+                deducted from the Cook's $TEAK stake. If the Grill Master is the winner of the Verification Game under forced-error
+                conditions, they receive a jackpot payout, deducted from the shared jackpot pool. If the Grill Master loses
+                the Verification Game, their $TEAK is burned.
+            </p>
+
+            <h4>
+                <span class="icon">🚗</span>Become a Backseat Griller
+            </h4>
+            <p>
+                By staking large amounts of $TEAK, $TEAK Holders can join the Backseat Griller Crowd. When a Proof of Steak is challenged
+                and the Verification Game begins, Backseat Grillers are randomly selected by the network (ala Proof of Stake).
+                Backseat Grillers have the ability to vouch for the validity or invalidity of a Proof of Steak. Backseat
+                Grillers that side with the minority have their $TEAK burned. Under forced-error conditions, Backseat Grillers
+                that side with the majority receive a share of the jackpot payout.
+            </p>
+        </div>
+    </div>
+
+    <%= partial 'partials/whitepaper_cta', locals: { sub: '(the whitepaper has more info)', button_type: 'secondary' } %>
+</section>
+
+
+<section id="ico" class="inverse">
+    <div class="row align-center sub-header-container">
+        <div class="small-12 columns">
+            <h3 class="text-center">
+                The ICS (Initial Cutting of $TEAK) is happening right now!
+            </h3>
+            <span class="help-text sub-header-subtitle">(what, you thought we wouldn't have an ICO?)</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns center-top">
+            <%= image_tag 'steak-token.png', class: 'small rounded steak-token', alt: 'The $TEAK Token' %>
+        </div>
+        <div class="columns center-top">
+            <%= image_tag 'steak-token.png', class: 'rounded steak-token', alt: 'The $TEAK Token' %>
+        </div>
+        <div class="columns center-top">
+            <%= image_tag 'steak-token.png', class: 'small rounded steak-token', alt: 'The $TEAK Token' %>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-12 columns isc-info-container">
+            <span class="total-supply">975,220,000,000</span>
+            <span class="help-text">Total Supply of $TEAK</span>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-12 columns">
+            <div class="donation-container">
+                <p>Literally just send
+                    <code>ETH</code> to this address and we'll give you some
+                    <code>$TEAK</code>:</p>
+                <code class="donation-address"><%= donation_address %></code>
+                <p class="help-text">✔️ I understand that I get $TEAK Tokens worth literally nothing in exchange for sending ETH to this address.</p>
+                <p class="help-text">✔️ Delivered rare, medium-rare, or Pittsburgh-style.</p>
+                <p class="help-text">✔️ All ETH is donated to the below projects.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row align-center sub-header-container">
+        <div class="small-10 columns">
+            <h3 class="text-center">
+                ICS Donations
+            </h3>
+            <span class="help-text sub-header-subtitle">100% to nonprofits!</span>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-12 medium-8 large-6 columns">
+            <canvas id="ics-distribution"></canvas>
+        </div>
+    </div>
+    <div class="row align-center last-item-in-section">
+        <div class="small-10 columns">
+            <p>
+                The Steak Network Bounty will be used to reward anyone
+                <strike>silly</strike> ambitious and visionary enough to build the Steak Network. They will be stored in a Gnosis
+                MultiSig wallet operated by The Team and Advisors. A unanimous vote will be required to release funds. We
+                will work together with interested parties to advise the construction of the Steak Network.
+            </p>
+        </div>
+    </div>
+
+
+</section>
+
+
+<section id="team" class="primary">
+    <div class="row align-center sub-header-container">
+        <div class="small-10 columns">
+            <h3 class="text-center">
+                The Team
+            </h3>
+        </div>
+    </div>
+    <div class="row align-center">
+        <%= partial 'partials/person', locals: {
+            img: '/images/matt.jpg',
+            name: 'Matt Condon',
+            desc: '<b>CEO (Cheif [Steak] Eating Officer) and CTO (Cheif Tenderizing Officer)</b> of The Steak Network Foundation. Well versed in both steaks and blockchains, he\'s the perfect custodian of the Steakchain. His previous accomplishments include <a target="_blank" href="https://itunes.apple.com/us/app/how-many-rocks-are-there/id1155989848">How Many Rocks Are There</a>, <a target="_blank" href="https://itunes.apple.com/us/app/we-know-art/id1234066611">We Know Art</a>, <a target="_blank" href="https://github.com/Shrugs/asdfghjkl">asdfghjkl</a>, and <a target="_blank" href="https://teespring.com/">this partyparrot T-shirt</a>.',
+        } %>
+    </div>
+</section>
+
+
+<section id="investors" class="inverse">
+    <div class="row align-center sub-header-container">
+        <div class="small-10 columns">
+            <h3 class="text-center">
+                Investors https://twitter.com/rzurrer
+            </h3>
+            <span class="help-text sub-header-subtitle">(no, nobody here is actually investing money)</span>
+        </div>
+    </div>
+    <div class="row align-center">
+        <%= partial 'partials/person', locals: {
+            img: '/images/matt.jpg',
+            name: 'Matt Condon',
+            desc: '<b>CEO (Cheif [Steak] Eating Officer) and CTO (Cheif Tenderizing Officer)</b> of The Steak Network Foundation. Well versed in both steaks and blockchains, he\'s the perfect custodian of the Steakchain. His previous accomplishments include <a target="_blank" href="https://itunes.apple.com/us/app/how-many-rocks-are-there/id1155989848">How Many Rocks Are There</a>, <a target="_blank" href="https://itunes.apple.com/us/app/we-know-art/id1234066611">We Know Art</a>, <a target="_blank" href="https://github.com/Shrugs/asdfghjkl">asdfghjkl</a>, and <a target="_blank" href="https://teespring.com/">this partyparrot T-shirt</a>.',
+        } %>
+            <%= partial 'partials/person', locals: {
+            img: '/images/matt.jpg',
+            name: 'Matt Condon',
+            desc: '<b>CEO (Cheif [Steak] Eating Officer) and CTO (Cheif Tenderizing Officer)</b> of The Steak Network Foundation. Well versed in both steaks and blockchains, he\'s the perfect custodian of the Steakchain. His previous accomplishments include <a target="_blank" href="https://itunes.apple.com/us/app/how-many-rocks-are-there/id1155989848">How Many Rocks Are There</a>, <a target="_blank" href="https://itunes.apple.com/us/app/we-know-art/id1234066611">We Know Art</a>, <a target="_blank" href="https://github.com/Shrugs/asdfghjkl">asdfghjkl</a>, and <a target="_blank" href="https://teespring.com/">this partyparrot T-shirt</a>.',
+        } %>
+    </div>
+</section>
+
+<section id="advisors" class="primary">
+    <div class="row align-center sub-header-container">
+        <div class="small-10 columns">
+            <h3 class="text-center">
+                Advisors
+            </h3>
+        </div>
+    </div>
+    <div class="row align-center">
+        <%= partial 'partials/person', locals: {
+            img: '/images/matt.jpg',
+            name: 'Matt Condon',
+            desc: '<b>CEO (Cheif [Steak] Eating Officer) and CTO (Cheif Tenderizing Officer)</b> of The Steak Network Foundation. Well versed in both steaks and blockchains, he\'s the perfect custodian of the Steakchain. His previous accomplishments include <a target="_blank" href="https://itunes.apple.com/us/app/how-many-rocks-are-there/id1155989848">How Many Rocks Are There</a>, <a target="_blank" href="https://itunes.apple.com/us/app/we-know-art/id1234066611">We Know Art</a>, <a target="_blank" href="https://github.com/Shrugs/asdfghjkl">asdfghjkl</a>, and <a target="_blank" href="https://teespring.com/">this partyparrot T-shirt</a>.',
+        } %>
+            <%= partial 'partials/person', locals: {
+            img: '/images/matt.jpg',
+            name: 'Matt Condon',
+            desc: '<b>CEO (Cheif [Steak] Eating Officer) and CTO (Cheif Tenderizing Officer)</b> of The Steak Network Foundation. Well versed in both steaks and blockchains, he\'s the perfect custodian of the Steakchain. His previous accomplishments include <a target="_blank" href="https://itunes.apple.com/us/app/how-many-rocks-are-there/id1155989848">How Many Rocks Are There</a>, <a target="_blank" href="https://itunes.apple.com/us/app/we-know-art/id1234066611">We Know Art</a>, <a target="_blank" href="https://github.com/Shrugs/asdfghjkl">asdfghjkl</a>, and <a target="_blank" href="https://teespring.com/">this partyparrot T-shirt</a>.',
+        } %>
+    </div>
+</section>
+
+<section id="support" class="inverse">
+    <div class="row align-center second-header-container">
+        <div class="small-10 columns">
+            <h3>
+                Is This Real?
+            </h3>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-10 columns">
+            <p>
+                Yeah, basically.
+            </p>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-10 medium-5 columns">
+            <h5>Things that Are Real:</h5>
+            <ul>
+                <li>Proof of Steak (the protocol) is real and designed to work.</li>
+                <li>The ICS is real and happening. You will get real $TEAK in exchange for your donation.</li>
+                <li>The jokes are real
+                    <sup>(bad)</sup>.
+                </li>
+            </ul>
+        </div>
+        <div class="small-10 medium-5 columns">
+            <h5>Things that Are Not
+                <sup>(yet)</sup> Real:
+            </h5>
+            <ul>
+                <li>
+                    The Steak Network; nothing has been built to make the Steak Network actually work. Want to build it? Let us know and we'll
+                    work with you to make our collective dream a reality.
+                </li>
+                <li>
+                    Nobody involved has contributed any money to this project, least of all the "investors"; there is no guarantee that your
+                    $TEAK will be worth more than the network fee required to mint them.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row align-center second-header-container">
+        <div class="small-10 columns">
+            <h3>
+                About the Project
+            </h3>
+        </div>
+    </div>
+    <div class="row align-center">
+        <div class="small-10 columns">
+            <p>
+                Yes, I did all of this for the joke "Proof of Steak"
+            </p>
+            <p>
+                But it turns out you could probably use Proof of Steak (this chain-curation protocol) to secure any chain where the proofs
+                can't be modeled cryptographically, primarily things that are crowd-opinion-based or aren't yet machine-verifiable.
+            </p>
+            <p>
+                It could be used to create a set of verifiably rare memes, for example, or decentrally curate high-quality datasets for machine
+                learning or AI training, or even creating a decentralized MTurk.
+            </p>
+            <p>
+                I don't plan on actually implementing Proof of Steak, although it would be
+                <strike>fun</strike> revolutionary. If enough
+                <strike>easily-amused people</strike> inspiring supporters
+                <strike>send me</strike> donate enough money and really want to see a damn mobile app for sharing pictures of steak
+                powered by Ethereum, I'll quit my job and build the damn Steak Network.
+            </p>
+            <div class="donation-container">
+                <p>Want to directly support stupid projects like this? Buy me a steak by sending
+                    <code>ETH</code> or your favorite shitcoin to this address:</p>
+                <code class="donation-address"><%= personal_address %></code>
+                <p class="help-text">✔️ This money goes directly to me.</p>
+                <p class="help-text">✔️ I promise to spend it on stupid things.</p>
+            </div>
+        </div>
+    </div>
+    <%= partial 'partials/whitepaper_cta', locals: { sub: '(last chance!!! only one call to action left!!! click now!!!)', button_type: 'primary' } %>
+</section>

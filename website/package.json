@@ -1,0 +1,32 @@
+{
+  "name": "steak.network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Condon <m@cond.in> (http://mat.tc)",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.7.0",
+    "foundation-sites": "^6.4.3",
+    "jquery": "^3.2.1",
+    "particles.js": "git://github.com/Saturate/particles.js.git#patch-1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "webpack": "^3.5.6"
+  }
+}

@@ -1,0 +1,14 @@
+<div class="small-12 medium-6 large-4 columns person-container">
+    <div class="row align-center">
+        <div
+            class="img rounded bordered"
+            style="background-image: url('<%= defined?(img) ? img : '' %>');"
+        ></div>
+    </div>
+    <div class="row text-center">
+        <div class="small-12 columns">
+            <h4 class="header"><%= defined?(name) ? name : '' %></h4>
+            <p><%= defined?(desc) ? desc.html_safe : '' %></p>
+        </div>
+    </div>
+</div>

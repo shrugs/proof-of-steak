@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    <%= current_page.data.title || 'Steak Network | Proof of Steak' %>
+  </title>
+  <meta name="description" content="<%= current_page.data.description || 'Proof of Stake using Proof of Steak' %>" />
+
+  <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
+
+  <%= stylesheet_link_tag 'main' %>
+  <% (current_page.data.css || []).each do |css| %>
+    <%= stylesheet_link_tag css %>
+  <% end %>
+</head>
+
+<body class="<%= page_classes %>">
+
+  <%= yield %>
+
+  <%= partial 'partials/footer' %>
+
+  <%= javascript_include_tag 'main', defer: true %>
+
+  <% (current_page.data.js || []).each do |js| %>
+    <%= javascript_include_tag js, defer: true %>
+  <% end %>
+
+  <% if build? and environment?(:production) %>
+    <%= partial 'partials/google_analytics' %>
+  <% end %>
+
+
+</body>
+</html>

@@ -4,6 +4,6 @@ whitepaper:
 
 copy:
 	cp steak-network_whitepaper.pdf \
-		../website/source/assets/steak-network_whitepaper.pdf
+		./website/source/assets/steak-network_whitepaper.pdf
 
 all: whitepaper copy
