@@ -3,7 +3,6 @@
 // importing jquery like i give a fuck
 import $ from 'jquery'
 
-import { doNyan, doSparks } from './nyan'
 import 'particles.js/particles.js'
 import particlesConfig from '../assets/particlesjs-config.json'
 import Chart from 'chart.js'
@@ -38,6 +37,38 @@ new Chart(document.getElementById('ics-distribution'), {
     },
   },
 })
+
+const doNyan = (cat) => {
+  const framesAmount = 4
+  let currentFrame = 1
+
+  const cycleIds = (_currId) => {
+    if (_currId >= framesAmount) {
+      _currId = 1
+    } else {
+      _currId += 1
+    }
+
+    return _currId
+  }
+
+  const cycleFrames = () => {
+    cat.removeClass('frame' + currentFrame).addClass('frame' + cycleIds(currentFrame))
+    currentFrame = cycleIds(currentFrame)
+  }
+
+  setInterval(() => {
+    cycleFrames()
+  }, 500)
+}
+
+const doSparks = ($container, $combo) => {
+  const yCombosAmount = Math.ceil($container.height() / $combo.height())
+  for (var a = 0; a < yCombosAmount - 1; a += 1) {
+    const newCombo = $combo.clone()
+    $combo.parent().prepend(newCombo)
+  }
+}
 
 $('.easter-egg').on('click', () => {
   const $outer = $('.egg-container-container-container')
