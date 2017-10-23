@@ -6,7 +6,7 @@
 
 We present Proof of Steak, an algorithm capable of securing a blockchain where block proofs cannot be computed cryptographically. Proof of Steak is inspired by and modeled after the TrueBit Protocol[^1] and Verification Game[^2], and uses Proof of Stake[^3] to validate proofs in the event of a challenge.
 
-Further, we present the Steak Network, an implementation of Proof of Steak. In the Steak Network, the proofs are pictures of steak (a "Proof of Steak"). The Steak Network uses Proof of Steak to verify that every proof in the set of finalized proofs (the “Steakchain”) is a picture of a steak (and not, for example, a picture of something that is not steak).
+Further, we present the Steak Network, an implementation of Proof of Steak. In the Steak Network, the proofs are pictures of steak (a confusingly named "Proof of Steak"). The Steak Network uses Proof of Steak to verify that every proof in the set of finalized proofs (the “Steakchain”) is a picture of a steak (and not, for example, a picture of something that is not steak).
 
 [^1]: https://truebit.io/
 [^2]: https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf
@@ -14,7 +14,7 @@ Further, we present the Steak Network, an implementation of Proof of Steak. In t
 
 # Use Cases
 
-Proof of Steak can be used to secure a blockchain in any situation where the proofs are a function of opinion and not mathematics. In the Steak Network, for example, the proofs are pictures of steaks; whether or not a picture is of a steak is not (yet) machine-verifiable and is a function of crowd-opinion.
+Proof of Steak can be used to secure a blockchain in any situation where the proofs are a function of opinion and not mathematics, effectively creating a curated registry. In the Steak Network, for example, the proofs are pictures of steaks; whether or not a picture is of a steak is not (yet) machine-verifiable and is a function of crowd-opinion.
 
 Additional use cases include
 
@@ -28,9 +28,9 @@ Additional use cases include
 
 # Proof of Steak and The TrueBit Protocol
 
-Proof of Steak differs slightly from the TrueBit protocol: firstly, we rename all of the actors in the system for comedic effect. Network participants and Verifiers are Steak Holders. Task Givers and Solvers are Cooks. Challengers (Verifiers that challenge the validity of a solution) are Grill Masters. Secondly, the Task Giver and Solver are the same entity; it can be thought of as providing the Task “submit a Proof” and immediately solving it by including the Proof itself.
+Proof of Steak differs slightly from the TrueBit protocol: firstly, we rename all of the actors in the system for comedic effect. Network participants and Verifiers are Steak Holders, Task Givers are Butchers, and Solvers are Cooks. Challengers (Verifiers that challenge the validity of a solution) are Grill Masters.
 
-Additionally, the TrueBit Verification Game doesn't apply to Proof of Steak; there is no way to computationally and objectively verify that a submitted Proof is valid. Therefore, in lieu of the Verification Game, we propose that Challenges are resolved using a Proof of Stake protocol (“Grilling the Cook”). All token holders ("Steak Holders") can become a potential Proof of Stake Witness (“Backseat Griller”) by joining the Witness Pool (“Backseat Griller Crowd”). They then have a chance to become a Backseat Griller, weighted by staked amount, in the event of a challenge. These Backseat Grillers then follow the Proof of Stake protocol for voting on the validity of a challenged Proof. This voting is a simple weighted majority/minority voting scheme.
+Additionally, the TrueBit Verification Game doesn't apply to Proof of Steak; there is no way to computationally and objectively verify that a submitted Proof is valid. Therefore, in lieu of the Verification Game, we propose that Challenges are resolved using a Proof of Stake protocol (“Grilling the Cook”). All network participants ("Steak Holders") can become a potential Proof of Stake Witness (“Backseat Griller”) by joining the Witness Pool (“Backseat Griller Crowd”). They then have a chance to become a Backseat Griller, weighted by staked amount, in the event of a challenge. These Backseat Grillers then follow the Proof of Stake protocol for voting on the validity of a challenged Proof. This voting is a simple weighted majority/minority voting scheme.
 
 Proof of Steak also:
 
@@ -41,86 +41,101 @@ Proof of Steak also:
 
 # Proof of Steak and IPFS
 
-The Steak Network Proofs must be made widely available for all network participants. Therefore, they will be stored using the InterPlanetary File System (IPFS): a high-throughput, content-addressed distributed block storage model, with content-addressed hyperlinks. There are low security concerns as no sensitive data are stored and widespread dissemination of network Proofs is encouraged. IPFS has been made production-ready through notable projects such as FileCoin.
+The Steak Network Proofs must be made widely available for all network participants. Therefore, they will be stored using the InterPlanetary File System (IPFS), a high-throughput, content-addressed distributed block storage model. There are low security concerns as no sensitive data are stored and widespread dissemination of network Proofs is encouraged. IPFS has been made production-ready through notable projects such as FileCoin.
 
 Also we get to namedrop IPFS in the whitepaper for extra credibility.
 
 # Proof of Steak Protocol Overview
 
-Any network participant (“Steak Holder”) can submit a Proof to the network and stake tokens on its validity. This Proof is considered valid until challenged. If not challenged within the challenge timeout period, it is finalized and the staked tokens are released. If a proof is challenged, the Grilling of the Cook begins, which elects Backseat Grillers to validate or invalidate the Proof. The Cook’s stake is burned if the Grilling determines that they have submitted an invalid Proof.
+Any network participant (“Steak Holder”) may submit a task ("become Butcher") requesting a valid Proof be submitted to the network for some reward.
 
-To incentivise Verifiers, the network also introduces forced errors, which invert the game theory and slightly alter the economic incentives. When a Cook submits a Proof, they are told whether a forced error is in effect or not. In the case of a forced error, the Cook submits an intentionally incorrect Proof. Then, upon a successful challenge and Grilling, Grill Masters are awarded a jackpot payout.
+Steak Holders can submit a Proof to the network ("become Cook") to fulfill a Butcher's request and stake tokens on its validity. This Proof is considered valid until challenged. If not challenged within the challenge timeout period, it is finalized, the staked tokens are released, and the Cook is rewarded. If a proof is challenged, the Grilling of the Cook begins, which elects Backseat Grillers to validate or invalidate the Proof. The Cook’s stake is burned if the Grilling determines that they have submitted an invalid Proof.
+
+To incentivise Verifiers, the network also introduces forced errors, which invert the game theory and slightly alter the economic incentives. After a Cook commits the Proofs, they know whether a forced error is in effect or not. In the case of a forced error, the Cook reveals an intentionally incorrect Proof. Then, upon a successful challenge and Grilling, Grill Masters are awarded a jackpot payout.
 
 If a Cook, Grill Master, or Backseat Griller is determined to have acted maliciously, their stake is forfeited to the jackpot at tax rate T and otherwise burned (“burned to the Jackpot”).
 
 # Proof of Steak Protocol Detail
 The following section provides a detailed look into the operation of Proof of Steak.
 
-1. A Steak Holder becomes Cook by submitting a Proof to the network. This involves:
+1. A Steak Holder becomes Butcher by requesting a Proof be submitted to the network and providing a reward _Reward_ for its fulfillment.
+2. A Steak Holder becomes Cook by submitting a Proof to the network to fulfill a Butcher's request. This involves:
     - Generating a random secret number _r_, the hash of which (_Hr_) is published to the blockchain,
     - Preparing one valid _Proof A_,
     - Preparing one invalid _Proof B_, and
     - Staking token amount _S_ on their rational behavior.
-2. The next block is mined.
+3. The next block is mined.
     - The hash of the block header is determined.
-    - The Cook knows both the secret number _r_ and the block header hash and can determine whether or not a forced error is in effect.
-        + If a forced error is NOT in effect, commit the valid _Proof A_
-        + If a forced error IS in effect, commit the invalid _Proof B_
-3. Between this point and timeout, any Steak Holder may become Grill Master and Challenge the committed Proof.
+    - The Cook knows both the secret number _r_ and the block header hash and can determine whether or not a forced error is in effect by hashing the two inputs and determining if the sum is less than the forced error rate _Fr_.
+        + If a forced error is NOT in effect, commit the salted hash of valid _Proof A_
+        + If a forced error IS in effect, commit the salted hash of invalid _Proof B_
+4. Between this point and timeout, any Steak Holder may become Grill Master and Challenge the committed Proof.
     - If no Steak Holders become Grill Master:
         + The Proof is considered valid and finalized.
-        + The Cook’s stake is partially released and partially taxed at rate _Tc_ to fund the Jackpot.
+        + Cook’s stake is partially released and partially taxed at rate _Tc_ to fund the Jackpot.
+        + Cook is rewarded with _Reward_ from Butcher.
+        + The Butcher's request is fulfilled.
     - If a Steak Holder becomes Grill Master, the Grilling of the Cook begins.
 
 ### The Grilling of the Cook
 
-1. Grill Master stakes token amount Sm on the invalidity of the committed Proof.
+1. Grill Master stakes token amount Sm on the invalidity of the committed _Proof_.
 2. Cook reveals secret number _r_, allowing the other actors to determine if a forced error is in effect.
 3. If a forced error is NOT in effect:
     1. Elect Backseat Grillers from the Backseat Griller Crowd, weighted by staked token amount.
-    2. Backseat Grillers vouch for the validity or invalidity of the revealed Proof by _witnessTimeout_.
+    2. Backseat Grillers vouch for the validity or invalidity of the revealed _Proof_ by _witnessTimeout_.
         - If the Proof is determined to be valid:
             + Cook’s stake is released,
+            + Cook is rewarded with _Reward_ from Butcher.
             + Grill Master’s stake is burned to the Jackpot,
             + Minority-voting Backseat Grillers’ stake is partially burned to the Jackpot,
-            + Proof is finalized.
+            + The _Proof_ is finalized.
+            + The Butcher's Request is fulfilled.
         - If the Proof is determined to be invalid:
             + Cook’s stake is burned to the Jackpot at tax rate _T_ and otherwise awarded to the Grill Master,
             + Grill Master’s stake is released,
             + Minority-voting Backseat Grillers’ stake is partially burned,
-            + Proof is discarded.
+            + The _Proof_ is discarded.
+            + The Butcher's request is non fulfilled and is still valid.
 4. If a forced error IS in effect:
     1. Cook reveals valid _Proof A_, discarding invalid _Proof B_
     2. Between now and _2 * timeout_, Cooks can become Second Grill Master and Challenge the validity of _Proof A_
         - If no Cooks become Second Grill Master:
             + The Cook’s stake is released.
+            + Cook is rewarded with _Reward_ from Butcher.
             + The Grill Master’s stake is released.
             + The Grill Master is awarded Jackpot _J_.
             + The _Proof A_ is considered valid and finalized.
+            + The Butcher's Request is fulfilled.
         - If a Cook becomes Second Grill Master, the Grilling of the Cook begins.
             1. Second Grill Master stakes token amount _Sm_ on the invalidity of _Proof A_.
             2. Elect Backseat Grillers from the Backseat Griller Crowd, weighted by staked token amount.
             3. Backseat Grillers vouch for the validity or invalidity of the _Proof A_ by )_witnessTimeout_.
                 - If the _Proof A_ is determined to be valid:
                     + The Cook’s stake is released.
-                    + Grill Master’s stake is released.
-                    + The Cook is rewarded with Jackpot _J_
-                    + Majority-voting Backseat Grillers are awarded with fractional Jackpot _Jf_
+                    + Cook is rewarded with _Reward_ from Butcher,
+                    + The Cook is rewarded with Jackpot _J_,
+                    + Grill Master’s stake is released,
+                    + Majority-voting Backseat Grillers are awarded with fractional Jackpot _Jf_, and
                     + The _Proof A_ is finalized.
                 - If the _Proof A_ is determined to be invalid:
-                    + Cook’s stake is burned to the Jackpot.
-                    + Grill Master is awarded fractional Jackpot _Jf_
-                    + Minority-voting Backseat Griller’ stake is partially burned to the Jackpot,
-                    + Proof is discarded.
+                    + Cook’s stake is burned to the Jackpot,
+                    + Grill Master is awarded fractional Jackpot _Jf_,
+                    + Minority-voting Backseat Griller’ stake is partially burned to the Jackpot, and
+                    + The _Proof A_ is discarded.
+                    + Butcher's request is discarded but may be resubmitted. _Reward_ is returned to the Butcher.
 
 # Actors and Incentives
 What follows is a summary of the actors in the network, their definitions, and their incentives for participating in the network.
 
 #### Steak Holders (Network Participants & Verifiers)
-Steak Holders are holders of the network token. They have the ability to become Cook by submitting Proofs to the network, as well as the ability to become Grill Master and challenge another Cook's Proof.
+Steak Holders are holders of the network token. They have the ability to become Butcher and request a valid Proof be submitted to the network, the ability to become Cook by submitting Proofs to the network, and the ability to become Grill Master and challenge another Cook's Proof.
 
-#### Cook (Task Giver & Solver)
-Any Steak Holder may become Cook by submitting a Proof and staking tokens on its validity. If a Cook behaves correctly, their Proof is finalized and included in the set of valid proofs. If a Cook's Proof is challenged and the Cook is the loser of the Verification Game, their stake is burned to the jackpot.
+#### Butcher (Task Giver)
+Any network participant may become Butcher and request a Proof to be submitted to the network and provide a reward for doing so.
+
+#### Cook (Solver)
+Any Steak Holder may become Cook by submitting a Proof to fulfill a Butcher's task and staking tokens on its validity. If a Cook behaves correctly, their Proof is finalized and included in the set of valid proofs. If a Cook's Proof is challenged and the Cook is the loser of the Verification Game, their stake is burned to the jackpot.
 
 #### Grill Master (Challenger)
 Any Steak Holder may become Grill Master by challenging a Cook's Proof of Steak and staking on its invalidity. If the Grill Master is the winner of the Verification Game under normal conditions, they receive a small payout, deducted from the Cook's stake. If the Grill Master is the winner of the Verification Game under forced-error conditions, they receive a jackpot payout, deducted from the shared jackpot pool. If the Grill Master loses the Grilling of the Cook, their stake is burned.
@@ -131,6 +146,7 @@ By staking large amounts of the network token, Steak Holders can join the Backse
 ---
 
 # Steak Network
+The Steak Network is a decentralized social network of Steak enthusiasts that enables decentralized sharing of pictures of steak ("Proofs of Steak").
 
 ## The $TEAK Token
 
@@ -175,7 +191,7 @@ Percent | Project or Charity           | Reason
 |:------|------------------------------|---------------------------------------------------|
 10%     | The Ethereum Foundation      | Securing our Steaks (and, like, Ethereum stuff)
 50%     | TrueBit Establishment        | Protocol Inspiration (aka doing most of the work)
-40%     | Anyone Willing To Build This | It'd be hilarious.
+20%     | Anyone Willing To Build This | It'd be hilarious.
 
 The ISC begins whenever we start it and will end whenever all of the \$TEAK is fully distributed, or we have reached the inevitable heat-death of the universe, whichever comes first.
 
@@ -185,6 +201,8 @@ The ISC begins whenever we start it and will end whenever all of the \$TEAK is f
 ## Steak Network Implementation
 
 ### The Network
+
+In the Steak Network, the Butcher (Task Giver) and Cook (Solver) are the same entity, simply referred to as "Cook"; it can be thought of as providing the Task “submit a Proof” and immediately solving it by including the Proof itself. This does not affect the protocol game theory because the reward for submitting proofs to the Steak Network is the raw, unparalleled joy of having your Proof of Steak included in the Steakchain.
 
 Due to the increased number of expensive actions required to become a successful Cook, the Steak Network has an increased barrier of entry compared to proof submission processes in other stake-based networks. For example, in the TrueBit protocol, solvers simply run virtual machine bytecode and create Merkle proofs of intermediate and final results. In Proof of Steak, participants must locate images of particular cuts of meat on third-party services such as Google Images, Pinterest, or Real Life. They must then perform additional tasks such as Copy-And-Paste, Save-To-Folder, or Upload-To-Computer. Because Cooks must perform many difficult and taxing tasks for low compensation, the resistance of the network to attack is significantly improved and attacks become rarer.
 
@@ -198,7 +216,7 @@ The Steak Network App (the "App") will allow you to become a \$TEAK Holder by pr
 
 ### The Steakchain Feed
 
-The primary screen of the app is the Steakchain feed, where \$TEAK Holders act as verifiers. It is an instagram-style, infinitely scrolling set of Cook-submitted Proofs of Steak. You can:
+The primary screen of the app is the Steakchain feed, where \$TEAK Holders act as verifiers. It is an Instagram-style, infinitely scrolling set of Cook-submitted Proofs of Steak. You can:
 
 1. "Heart" Proofs of Steak[^11] to save them to your personal table,
 2. Rate Proofs of Steak[^12], and
@@ -231,9 +249,9 @@ In the name of strategic ~~buzzwords~~ marketing, the Steak Network will also be
 
 ## Future Obstacles
 
-Note that due to the Steak Network's use of Proof of Steak, forks are not only possible, but highly encouraged. The Steak Network will also implement knife-based slashing conditions for disincentivizing Proof of Stake protocol violations.
+Note that due to the Steak Network's use of Proof of Steak, forks are not only possible, but highly encouraged, because hand-crafting submissions is a messy process. The Steak Network will also implement knife-based slashing conditions for disincentivizing Proof of Stake protocol violations.
 
-Additionally, malicious actors could conspire to repost Proofs of Steak and reap the rewards. To enable Cooks to identify duplicate Proofs of Steak, the Steak Network will operate an external **Unique Steak Oracle**. This Oracle, operating outside of the Ethereum network, will analyze all submitted Proofs of Steak using classical image fingerprinting to detect duplicates. The oracle's findings will be used to inform, but not control, \$TEAK Holders' decisions as they browse the Steakchain Feed.
+Additionally, malicious actors could conspire to repost Proofs of Steak and reap the rewards. To enable Cooks to identify duplicate Proofs of Steak, the Steak Network will operate an external **Unique Steak Oracle**. This Oracle, operating outside of the Ethereum network, will analyze all submitted Proofs of Steak using classical steak fingerprinting to detect duplicates. The oracle's findings will be used to inform, but not control, \$TEAK Holders' decisions as they browse the Steakchain Feed.
 
 ## Advisors and Investors
 

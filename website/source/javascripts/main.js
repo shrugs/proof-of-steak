@@ -15,11 +15,11 @@ setTimeout(() => {
 new Chart(document.getElementById('ics-distribution'), {
   type: 'pie',
   data: {
-    labels: ['The Ethereum Foundation', 'The TrueBit Establishment', 'The Steak Network Bounty'],
+    labels: ['The Ethereum Foundation', 'Crypto Kitties', 'The Dogeth Art Project', 'The Steak Network Bounty'],
     datasets: [{
       borderColor: '#f4f1de',
-      backgroundColor: ['#ab544b', '#ad4d43', '#b3665d'],
-      data: [10, 70, 20],
+      backgroundColor: ['#ab544b', '#ad4d43', '#b3665d', '#ad4d43'],
+      data: [10, 5, 65, 20],
     }],
   },
   options: {

@@ -42,7 +42,7 @@
                     <h5>
                         Decentralized networks are a rare medium well-done.
                     </h5>
-                    <p>
+                    <p class="slightly-bigger-text">
                         We present the
                         <b>Steak Network</b>, a decentralized social network of Steak enthusiasts built on top of Ethereum.
                         The core feature of the Steak Network is the
@@ -53,7 +53,7 @@
                         <b>TrueBit</b> and a
                         <b>Proof of Stake</b> protocol.
                     </p>
-                    <p>
+                    <p class="slightly-bigger-text">
                         Using the Steak Network, users can trustlessly share Proof of Steak, knowing for certain that the Steakchain is exclusively
                         made up of verifiably rare (or medium-rare) pictures of steak.
                     </p>
@@ -87,10 +87,10 @@
                         <a href="https://truebit.org">TrueBit's Verification Game</a>.
                     </p>
                     <p>
-                        During the validation phase, any token holder may become
+                        During the verification phase, any token holder may become
                         <b>Grill Master</b> by challenging the validity of a Cook's Proof of Steak. If a challenge by a Grill
                         Master is made, the Grilling of the Cook (verification game) begins. If no challenge is made by the
-                        end of the validation phase, the Proof of Steak is considered genuine and is then finalized, recorded
+                        end of the verification phase, the Proof of Steak is considered genuine and is then finalized, recorded
                         forever in the Steakchain.
                     </p>
                     <h4>
@@ -172,7 +172,7 @@
             <p>
                 Any $TEAK Holder may become Cook by submitting a Proof of Steak and staking $TEAK on its validity. If a Cook behaves correctly,
                 their Proof of Steak is validated and added to the Steakchain. If a Cook's Proof of Steak is challenged and
-                the Cook is the loser of the Verification Game, their $TEAK is burned.
+                the Cook is the loser of the Grilling of the Cook, their $TEAK is burned.
             </p>
 
             <h4>
@@ -247,7 +247,7 @@
             <h3 class="text-center">
                 ICS Donations
             </h3>
-            <span class="help-text sub-header-subtitle">100% to nonprofits!</span>
+            <span class="help-text sub-header-subtitle">100% back to the community!</span>
         </div>
     </div>
     <div class="row align-center">
@@ -264,7 +264,7 @@
                 will work together with interested parties to advise the construction of the Steak Network.
             </p>
             <p>
-                Why is the TrueBit Establishment allocation so high? We're working on some awesome community-focused projects (a Doge-Ethereum Bridge, an IRL blockchain art project, and more) and will be giving it back to the community in one way or another. Join our Slack channel to contribute!
+                What is the Dogeth Art Project? It's a community-organized effort to build an IRL art project illustrating the Doge-Ethereum bridge being developed by TrueBit. Join our Slack channel to contribute!
             </p>
         </div>
     </div>
@@ -331,7 +331,17 @@
         <%= partial 'partials/person', locals: {
             img: '/images/jason.jpeg',
             name: 'Jason Teutsch',
-            desc: 'When he\'s not pursuing <b>Wild Game Theory</b>, Jason pursues grilled Moose from the back of Robbie\'s pickup truck.',
+            desc: 'Co-creator of the TrueBit protocol and the Interactive ICO Protocol, when Jason\'s not pursuing <b>Wild Game Theory</b>, he pursues grilled Moose from the back of Robbie\'s pickup truck.',
+        } %>
+        <%= partial 'partials/person', locals: {
+            img: '/images/benny.jpg',
+            name: 'Benny Giang',
+            desc: 'Benny is the co-creator of Crypto Kitties. "No Kitties were harmed in the making of the Steak Network."',
+        } %>
+        <%= partial 'partials/person', locals: {
+            img: '/images/arthur.jpg',
+            name: 'Arthur Camara',
+            desc: 'As the co-creator of Crypto Kitties, Arthur helps complete the holy trinity of internet culture: cats, cats, and cats.',
         } %>
     </div>
 </section>
@@ -392,8 +402,8 @@
                 Yes, I did all of this for the joke "Proof of Steak"
             </p>
             <p>
-                But it turns out you could probably use Proof of Steak (this chain-curation protocol) to secure any chain where the proofs
-                can't be modeled cryptographically, primarily things that are crowd-opinion-based or aren't yet machine-verifiable.
+                But it turns out you could probably use Proof of Steak (this registry-curation protocol) to secure any chain where the proofs
+                can't be modeled cryptographically, primarily things that are crowd-opinion-based or aren't yet machine-verifiable. It's similar to a Token-Curated Registry and similar.
             </p>
             <p>
                 It could be used to create a set of verifiably rare memes, for example, or decentrally curate high-quality datasets for machine
