@@ -259,10 +259,14 @@ The Steak Network Foundation is proud to be advised by:
 
 - Jason Teutsch and Robbie Bent, of the TrueBit Establishment
 - Jackson Palmer, creator of Dogecoin
+- Benny Giang and Arthur Camara, Crypto Kitties
 
 The Steak Network is supported by:
 
 - Ryan Zurrer, Polychain Capital.
+- Naval Ravikant and Lucas Ryan, MetaStable
+- Michael Karnjanaprakorn, Turing Capital
+- Alex Lines and Nicholas Chirls, Notaton Capital
 
 We never actually asked if we could use his name, but there it is:
 

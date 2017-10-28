@@ -36,7 +36,7 @@
         <div class="small-12 columns">
             <div class="row">
                 <div class="small-12 medium-6 columns">
-                    <img src="https://via.placeholder.com/500x500" alt="network illustration">
+                    <%= image_tag 'https://via.placeholder.com/500x500' %>
                 </div>
                 <div class="small-12 medium-6 columns">
                     <h5>
@@ -76,7 +76,7 @@
         <div class="small-11 medium-10 columns">
             <div class="row medium-flex-dir-row-reverse">
                 <div class="small-12 medium-6 columns">
-                    <img src="https://via.placeholder.com/500x500" alt="network illustration">
+                    <%= image_tag 'https://via.placeholder.com/500x500' %>
                 </div>
                 <div class="small-12 medium-6 columns">
                     <p>
@@ -302,9 +302,34 @@
     </div>
     <div class="row align-center">
         <%= partial 'partials/person', locals: {
+            img: '/images/naval.jpg',
+            name: 'Naval Ravikant',
+            desc: 'Naval is the CEO and a co-founder of <strike>AngelList</strike> SteakList. He previously co-founded Steak-pinions and shares our love of steak-based social networks.',
+        } %>
+        <%= partial 'partials/person', locals: {
             img: '/images/rzurrer.jpg',
             name: 'Ryan Zurrer',
             desc: 'Principal & Venture Partner @ <strike>Polychain</strike> <b>Steakchain Capital</b>. Helping build great token-enabled #blockchain networks (like the Steak Network).',
+        } %>
+        <%= partial 'partials/person', locals: {
+            img: '/images/lucas.jpg',
+            name: 'Lucas Ryan',
+            desc: 'Lucas is a partner at MetaStable Capital where he manages steak-based hedge funds.',
+        } %>
+        <%= partial 'partials/person', locals: {
+            img: '/images/mike.jpg',
+            name: 'Michael Karnjanaprakorn',
+            desc: 'Michael is all about sharing <strike>skills</strike> steaks. Investor @ Turing Boyz 2 Mignon',
+        } %>
+        <%= partial 'partials/person', locals: {
+            img: '/images/alex.jpg',
+            name: 'Alex Lines',
+            desc: 'Alex is a partner at Notation Capital to help technical founders turn their steaks into valuable $TEAK Tokens.',
+        } %>
+        <%= partial 'partials/person', locals: {
+            img: '/images/nicholas.jpeg',
+            name: 'Nicholas Chirls',
+            desc: 'Nicholas is a partner at Notation Capital and previously Head of Steak Investments at Betaworks. Steaklyn born and braised.',
         } %>
     </div>
 </section>
