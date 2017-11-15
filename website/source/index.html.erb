@@ -224,7 +224,8 @@
         </div>
     </div>
     <div class="row align-center">
-        <div class="small-12 columns isc-info-container">
+        <div class="small-12 columns ics-info-container">
+            <h3 class="text-center">We're raising 33 ETH (≈$10,000) in donations</h3>
             <span class="total-supply">975,220,000,000</span>
             <span class="help-text">Total Supply of $TEAK</span>
         </div>
@@ -235,10 +236,14 @@
                 <p>Literally just send
                     <code>ETH</code> to this address and we'll give you some
                     <code>$TEAK</code>:</p>
+                <p>
+                    <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction">Send a transaction to
+                        <%= donation_address %> via MyEtherWallet</a>
+                </p>
                 <code class="donation-address"><%= donation_address %></code>
                 <p class="help-text">✔️ I understand that I get $TEAK Tokens worth literally nothing in exchange for sending ETH to this address.</p>
                 <p class="help-text">✔️ Delivered rare, medium-rare, or Pittsburgh-style.</p>
-                <p class="help-text">✔️ All ETH is donated to the below projects.</p>
+                <p class="help-text">✔️ All ETH is forwarded to the projects below.</p>
             </div>
         </div>
     </div>
@@ -258,13 +263,8 @@
     <div class="row align-center last-item-in-section">
         <div class="small-10 columns">
             <p>
-                The Steak Network Bounty will be used to reward anyone
-                <strike>silly</strike> ambitious and visionary enough to build the Steak Network. They will be stored in a Gnosis
-                MultiSig wallet operated by The Team and Advisors. A unanimous vote will be required to release the $TEAK. We
-                will work together with interested parties to advise the construction of the Steak Network.
-            </p>
-            <p>
-                What is the Dogeth Art Project? It's a community-organized effort to build an IRL art project illustrating the Doge-Ethereum bridge being developed by TrueBit. Join our Slack channel to contribute!
+                What is the Dog-Eth Art Project? It's a community-organized effort to build an IRL art project illustrating the Doge-Ethereum
+                bridge being developed by TrueBit. Join our Slack channel to contribute to the discussion!
             </p>
         </div>
     </div>
@@ -306,37 +306,37 @@
             name: 'Naval Ravikant',
             desc: 'Naval is the CEO and a co-founder of <strike>AngelList</strike> SteakList. He previously co-founded Steak-pinions and shares our love of steak-based social networks.',
         } %>
-        <%= partial 'partials/person', locals: {
+            <%= partial 'partials/person', locals: {
             img: '/images/rzurrer.jpg',
             name: 'Ryan Zurrer',
             desc: 'Principal & Venture Partner @ <strike>Polychain</strike> <b>Steakchain Capital</b>. Helping build great token-enabled #blockchain networks (like the Steak Network).',
         } %>
-        <%= partial 'partials/person', locals: {
+                <%= partial 'partials/person', locals: {
             img: '/images/linda.jpg',
             name: 'Linda Xie',
             desc: 'Co-founder @ScalarCapital. Previously Product Manager @Coinbase. Advisor @0xProject. Author of the extremely popular <a href="https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf">Beginners Guide to the Steak Network</a> article.',
         } %>
-        <%= partial 'partials/person', locals: {
-            img: '/images/metastable.png',
-            name: 'Lucas Ryan',
-            desc: 'Lucas is a partner at MetaStable Capital, the premier backyard barbeque hedge-related fund.',
-        } %>
-        <%= partial 'partials/person', locals: {
+                    <%= partial 'partials/person', locals: {
             img: '/images/mike.jpg',
             name: 'Michael Karnjanaprakorn',
             desc: 'Michael is all about sharing <strike>skills</strike> steaks. Investor @ Turing Boyz 2 Mignon',
         } %>
-        <%= partial 'partials/person', locals: {
+                        <%= partial 'partials/person', locals: {
+            img: '/images/metastable.png',
+            name: 'Lucas Ryan',
+            desc: 'Lucas is a partner at MetaStable Capital, the premier backyard barbeque hedge-related fund.',
+        } %>
+                            <%= partial 'partials/person', locals: {
             img: '/images/alex.jpg',
             name: 'Alex Lines',
             desc: 'Alex is a partner at Notation Capital where he helps technical founders turn their steaks into valuable $TEAK Tokens.',
         } %>
-        <%= partial 'partials/person', locals: {
+                                <%= partial 'partials/person', locals: {
             img: '/images/nicholas.jpeg',
             name: 'Nicholas Chirls',
             desc: 'Nicholas is a partner at Notation Capital and previously Head of Steak Investments at Betaworks. Steaklyn born and braised.',
         } %>
-        <%= partial 'partials/person', locals: {
+                                    <%= partial 'partials/person', locals: {
             img: '/images/josh.jpg',
             name: 'Josh Nussbaum',
             desc: 'Josh is a partner at Compound, an NYC based VC firm that invests in <strike>early stage</strike> rare technology companies.',
@@ -358,30 +358,35 @@
             name: 'Jackson Palmer',
             desc: 'Creator of the original distributed & trustless meme, Dogecoin. Jackson brings years of invaluable meme-related experience to the Steak Network. ',
         } %>
-        <%= partial 'partials/person', locals: {
+            <%= partial 'partials/person', locals: {
             img: '/images/preethi.jpg',
             name: 'Preethi Kasireddy',
             desc: 'Steakchain Engineer & Tinkerer. Alum @steakbase @s734k @GoldmanSteaks. Passionate about blockchain & cryptoeconomics. Avid learner & blogger.',
         } %>
-        <%= partial 'partials/person', locals: {
+                <%= partial 'partials/person', locals: {
             img: '/images/robbie.jpg',
             name: 'Robbie Bent',
             desc: 'The Steak Network Foundation\'s <b>Resident Survivorman</b> and our veritable Bear <b>Grills</b>. Living in isolation in Northern Canada, he spends his free time hunting Moose and Wild Game to add to the SteakChain. He relentlessly pursues perfection, never settling for medium.',
         } %>
-        <%= partial 'partials/person', locals: {
+                    <%= partial 'partials/person', locals: {
             img: '/images/jason.jpeg',
             name: 'Jason Teutsch',
             desc: 'Co-creator of the TrueBit protocol and the Interactive ICO Protocol, when Jason\'s not pursuing <b>Wild Game Theory</b>, he pursues grilled Moose from the back of Robbie\'s pickup truck.',
         } %>
-        <%= partial 'partials/person', locals: {
+                        <%= partial 'partials/person', locals: {
             img: '/images/benny.jpg',
             name: 'Benny Giang',
-            desc: 'Benny is the co-creator of Crypto Kitties. "No Kitties were harmed in the making of the Steak Network."',
+            desc: 'Benny is the co-creator of Crypto Kitties.<br/> "No Crypto Kitties were harmed in the making of the Steak Network."',
         } %>
-        <%= partial 'partials/person', locals: {
+                            <%= partial 'partials/person', locals: {
             img: '/images/arthur.jpg',
             name: 'Arthur Camara',
             desc: 'As the co-creator of Crypto Kitties, Arthur helps complete the holy trinity of internet culture: cats, cats, and cats.',
+        } %>
+                                <%= partial 'partials/person', locals: {
+            img: '/images/ricky.jpg',
+            name: 'Ricky Medina',
+            desc: 'Ricky works on <strike>DigitalOcean</strike> SteakOcean, bringing user-friendly steak computing to the world.',
         } %>
     </div>
 </section>
@@ -442,26 +447,33 @@
                 Yes, I did all of this for the joke "Proof of Steak"
             </p>
             <p>
-                But it turns out you could probably use Proof of Steak (this registry-curation protocol) to secure any chain where the proofs
-                can't be modeled cryptographically, primarily things that are crowd-opinion-based or aren't yet machine-verifiable. It's similar to a Token-Curated Registry and similar.
+                But it turns out you could probably use Proof of Steak (this registry-curation protocol) to secure any list where the membership
+                proofs ("I belong in this list of things") can't be modeled cryptographically, primarily things that are
+                crowd-opinion-based or aren't yet machine-verifiable. It's effectively a Token-Curated Registry protocol
+                implementation, but with the addition of Forced errors to incentivise verifiers.
             </p>
             <p>
                 It could be used to create a set of verifiably rare memes, for example, or decentrally curate high-quality datasets for machine
-                learning or AI training, or even creating a decentralized MTurk.
+                learning or AI training, or even creating a decentralized MTurk. Proof of Steak could be applied in any case
+                where a high-quality list of items is more valuable than the sum of its parts.
             </p>
             <p>
-                I don't plan on actually implementing Proof of Steak, although it would be
+                I don't plan on actually implementing the Steak Network, although it would be
                 <strike>fun</strike> revolutionary. If enough
                 <strike>easily-amused people</strike> inspiring supporters
                 <strike>send me</strike> donate enough money and really want to see a damn mobile app for sharing pictures of steak
-                powered by Ethereum, I'll quit my job and build the damn Steak Network.
+                powered by Ethereum, I'll quit my job and build the damn thing.
             </p>
             <div class="donation-container">
                 <p>Want to directly support stupid projects like this? Buy me a steak by sending
                     <code>ETH</code> or your favorite shitcoin to this address:</p>
                 <code class="donation-address"><%= personal_address %></code>
+                <p>
+                    <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction">Send a transaction to
+                        <%= personal_address %> via MyEtherWallet</a>
+                </p>
                 <p class="help-text">✔️ This money goes directly to me.</p>
-                <p class="help-text">✔️ I promise to spend it on stupid things.</p>
+                <p class="help-text">✔️ I promise to spend it on stupid things like food, housing, and more dumb projects.</p>
             </div>
         </div>
     </div>
@@ -488,7 +500,7 @@
             <div id="wave-b" class="hot rainbow"></div>
             <div id="wave-b" class="cold rainbow"></div>
 
-                <div id="nyan-cat" class="frame1">
+            <div id="nyan-cat" class="frame1">
                 <div id="tail"></div>
 
                 <div id="paws"></div>

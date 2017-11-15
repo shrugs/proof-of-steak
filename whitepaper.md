@@ -4,9 +4,9 @@
 
 # Abstract
 
-We present Proof of Steak, an algorithm capable of securing a blockchain where block proofs cannot be computed cryptographically. Proof of Steak is inspired by and modeled after the TrueBit Protocol[^1] and Verification Game[^2], and uses Proof of Stake[^3] to validate proofs in the event of a challenge.
+We present Proof of Steak, an algorithm capable of curating a registry where membership proofs cannot be computed cryptographically. Proof of Steak is inspired by and modeled after the TrueBit Protocol[^1] and Verification Game[^2], and uses Proof of Stake[^3] PLCR Voting to validate proofs in the event of a challenge.
 
-Further, we present the Steak Network, an implementation of Proof of Steak. In the Steak Network, the proofs are pictures of steak (a confusingly named "Proof of Steak"). The Steak Network uses Proof of Steak to verify that every proof in the set of finalized proofs (the “Steakchain”) is a picture of a steak (and not, for example, a picture of something that is not steak).
+Further, we present the Steak Network, an implementation of Proof of Steak. In the Steak Network, the proofs are pictures of steak (a confusingly named "Proof of Steak"). The Steak Network uses Proof of Steak to verify that every proof in the set of finalized proofs (the "Steakchain") is a picture of a steak (and not, for example, a picture of something that is not steak).
 
 [^1]: https://truebit.io/
 [^2]: https://people.cs.uchicago.edu/~teutsch/papers/truebit.pdf
@@ -14,14 +14,16 @@ Further, we present the Steak Network, an implementation of Proof of Steak. In t
 
 # Use Cases
 
-Proof of Steak can be used to secure a blockchain in any situation where the proofs are a function of opinion and not mathematics, effectively creating a curated registry. In the Steak Network, for example, the proofs are pictures of steaks; whether or not a picture is of a steak is not (yet) machine-verifiable and is a function of crowd-opinion.
+Proof of Steak can be used to curate a registry in any situation where the proofs are a function of opinion and not mathematics. In the Steak Network, for example, the proofs are pictures of steaks; whether or not a picture is of a steak is not (yet) machine-verifiable and is a function of human-opinion.
 
 Additional use cases include
 
-- creating a set of verifiably rare memes,
+- creating a set of high quality memes,
 - decentrally curating a dataset for machine learning or AI training,
-- decentralized MTurk[^4], or
-- building a database of every rock on earth.[^5]
+- decentralized music playlist curation,
+- decentralized MTurk[^4],
+- building a database of every rock on earth[^5], or
+- any case where a well-curated list of items is more valuable than the sum of its parts.
 
 [^4]: Mechanical Turk, https://www.mturk.com/mturk/welcome
 [^5]: How Many Rocks Are There, And Where Are They? http://www.howmany.rocks/
@@ -30,7 +32,7 @@ Additional use cases include
 
 Proof of Steak differs slightly from the TrueBit protocol: firstly, we rename all of the actors in the system for comedic effect. Network participants and Verifiers are Steak Holders, Task Givers are Butchers, and Solvers are Cooks. Challengers (Verifiers that challenge the validity of a solution) are Grill Masters.
 
-Additionally, the TrueBit Verification Game doesn't apply to Proof of Steak; there is no way to computationally and objectively verify that a submitted Proof is valid. Therefore, in lieu of the Verification Game, we propose that Challenges are resolved using a Proof of Stake protocol (“Grilling the Cook”). All network participants ("Steak Holders") can become a potential Proof of Stake Witness (“Backseat Griller”) by joining the Witness Pool (“Backseat Griller Crowd”). They then have a chance to become a Backseat Griller, weighted by staked amount, in the event of a challenge. These Backseat Grillers then follow the Proof of Stake protocol for voting on the validity of a challenged Proof. This voting is a simple weighted majority/minority voting scheme.
+Additionally, the TrueBit Verification Game doesn't apply to Proof of Steak; there is no way to computationally and objectively verify that a submitted Proof is valid. Therefore, in lieu of the Verification Game, we propose that Challenges are resolved using a Proof of Stake PLCR (Partial-Lock-Commit-Reveal) voting protocol ("The Grilling the Cook"). All network participants ("Steak Holders") can become a potential Proof of Stake Witness ("Backseat Griller") by joining the Witness Pool ("Backseat Griller Crowd"). They then have a chance to become a Backseat Griller, weighted by staked amount, in the event of a challenge. These Backseat Grillers then follow the Proof of Stake protocol for voting on the validity of a challenged Proof. This voting is a simple weighted majority/minority voting scheme.
 
 Proof of Steak also:
 
@@ -41,19 +43,19 @@ Proof of Steak also:
 
 # Proof of Steak and IPFS
 
-The Steak Network Proofs must be made widely available for all network participants. Therefore, they will be stored using the InterPlanetary File System (IPFS), a high-throughput, content-addressed distributed block storage model. There are low security concerns as no sensitive data are stored and widespread dissemination of network Proofs is encouraged. IPFS has been made production-ready through notable projects such as FileCoin.
+The Steak Network Proofs must be made widely available for all network participants. Therefore, they will be stored using a combination of Ethereum and the InterPlanetary File System (IPFS), a high-throughput, content-addressed distributed block storage model. There are low security concerns as no sensitive data are stored and widespread dissemination of network Proofs is encouraged. IPFS has been made production-ready through notable projects such as FileCoin.
 
 Also we get to namedrop IPFS in the whitepaper for extra credibility.
 
 # Proof of Steak Protocol Overview
 
-Any network participant (“Steak Holder”) may submit a task ("become Butcher") requesting a valid Proof be submitted to the network for some reward.
+Any network participant ("Steak Holder") may submit a task ("become Butcher") requesting a valid Proof be submitted to the network for some reward.
 
 Steak Holders can submit a Proof to the network ("become Cook") to fulfill a Butcher's request and stake tokens on its validity. This Proof is considered valid until challenged. If not challenged within the challenge timeout period, it is finalized, the staked tokens are released, and the Cook is rewarded. If a proof is challenged, the Grilling of the Cook begins, which elects Backseat Grillers to validate or invalidate the Proof. The Cook’s stake is burned if the Grilling determines that they have submitted an invalid Proof.
 
 To incentivise Verifiers, the network also introduces forced errors, which invert the game theory and slightly alter the economic incentives. After a Cook commits the Proofs, they know whether a forced error is in effect or not. In the case of a forced error, the Cook reveals an intentionally incorrect Proof. Then, upon a successful challenge and Grilling, Grill Masters are awarded a jackpot payout.
 
-If a Cook, Grill Master, or Backseat Griller is determined to have acted maliciously, their stake is forfeited to the jackpot at tax rate T and otherwise burned (“burned to the Jackpot”).
+If a Cook, Grill Master, or Backseat Griller is determined to have acted maliciously, their stake is forfeited to the jackpot at tax rate T and otherwise burned ("burned to the Jackpot").
 
 # Proof of Steak Protocol Detail
 The following section provides a detailed look into the operation of Proof of Steak.
@@ -190,8 +192,9 @@ The Steak Network would benefit heavily from using the Interactive Coin Offering
 Percent | Project or Charity           | Reason
 |:------|------------------------------|---------------------------------------------------|
 10%     | The Ethereum Foundation      | Securing our Steaks (and, like, Ethereum stuff)
-50%     | TrueBit Establishment        | Protocol Inspiration (aka doing most of the work)
-20%     | Anyone Willing To Build This | It'd be hilarious.
+50%     | Doge-Eth Art Project         | Community Building and Art + Tech Awesomeness
+35%     | MyEtherWallet                | Being a guiding light for the Ethereum community
+5%      | CryptoKitties                | Art + Tech Inspiration
 
 The ISC begins whenever we start it and will end whenever all of the \$TEAK is fully distributed, or we have reached the inevitable heat-death of the universe, whichever comes first.
 
@@ -202,7 +205,7 @@ The ISC begins whenever we start it and will end whenever all of the \$TEAK is f
 
 ### The Network
 
-In the Steak Network, the Butcher (Task Giver) and Cook (Solver) are the same entity, simply referred to as "Cook"; it can be thought of as providing the Task “submit a Proof” and immediately solving it by including the Proof itself. This does not affect the protocol game theory because the reward for submitting proofs to the Steak Network is the raw, unparalleled joy of having your Proof of Steak included in the Steakchain.
+In the Steak Network, the Butcher (Task Giver) and Cook (Solver) are the same entity, simply referred to as "Cook"; it can be thought of as providing the Task "submit a Proof" and immediately solving it by including the Proof itself. This does not affect the protocol game theory because the reward for submitting proofs to the Steak Network is the raw, unparalleled joy of having your Proof of Steak included in the Steakchain.
 
 Due to the increased number of expensive actions required to become a successful Cook, the Steak Network has an increased barrier of entry compared to proof submission processes in other stake-based networks. For example, in the TrueBit protocol, solvers simply run virtual machine bytecode and create Merkle proofs of intermediate and final results. In Proof of Steak, participants must locate images of particular cuts of meat on third-party services such as Google Images, Pinterest, or Real Life. They must then perform additional tasks such as Copy-And-Paste, Save-To-Folder, or Upload-To-Computer. Because Cooks must perform many difficult and taxing tasks for low compensation, the resistance of the network to attack is significantly improved and attacks become rarer.
 
@@ -259,14 +262,20 @@ The Steak Network Foundation is proud to be advised by:
 
 - Jason Teutsch and Robbie Bent, of the TrueBit Establishment
 - Jackson Palmer, creator of Dogecoin
-- Benny Giang and Arthur Camara, Crypto Kitties
+- Preethi Kasireddy, previously of Coinbase, a16z, and GoldmanSachs
+- Benny Giang and Arthur Camara, of Crypto Kitties
+- Lola Rigaut-Luczak, Blockchain Enthusiast
+- Ricky Medina, of DigitalOcean
+- Wayne Chang, of ConsenSys & WYC Technology
 
 The Steak Network is supported by:
 
 - Ryan Zurrer, Polychain Capital.
 - Naval Ravikant and Lucas Ryan, MetaStable
+- Linda Xie, Scalar Capital
 - Michael Karnjanaprakorn, Turing Capital
 - Alex Lines and Nicholas Chirls, Notaton Capital
+- Josh Nussbaum, Compund VC
 
 We never actually asked if we could use his name, but there it is:
 
@@ -286,6 +295,6 @@ Jason Teutsch for his work on the TrueBit Protocol, as well as the Interactive C
 
 Wayne Chang for valuable additions, clarifications, and "fork" jokes.
 
-Robbie Bent, Harley Swick, Sina Habibian, and Dylan Nguyen for valuable feedback.
+Robbie Bent, Harley Swick, Sina Habibian, Lola Rigaut-Luczak, and Dylan Nguyen for valuable feedback.
 
 Dhruv Lutha for joining the Slack channel.
