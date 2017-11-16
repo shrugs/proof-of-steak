@@ -1,0 +1,23 @@
+{
+  "name": "token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testrpc": "testrpc --verbose -l 6724898",
+    "test": "truffle test"
+  },
+  "author": "Matt Condon <m@cond.in> (http://mat.tc)",
+  "license": "ISC",
+  "dependencies": {
+    "truffle": "^4.0.1"
+  },
+  "devDependencies": {
+    "bignumber.js": "^4.1.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^2.0.2",
+    "ethereumjs-testrpc": "^6.0.1",
+    "zeppelin-solidity": "^1.3.0"
+  }
+}
