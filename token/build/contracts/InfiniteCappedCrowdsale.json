@@ -180,7 +180,7 @@
       "absolutePath": "/Users/matt/Projects/steak.network/token/contracts/InfiniteCappedCrowdsale.sol",
       "exportedSymbols": {
         "InfiniteCappedCrowdsale": [
-          182
+          176
         ]
       }
     },
@@ -193,7 +193,7 @@
             ".18"
           ]
         },
-        "id": 148,
+        "id": 142,
         "name": "PragmaDirective",
         "src": "0:23:3"
       },
@@ -202,13 +202,13 @@
           "SourceUnit": 817,
           "absolutePath": "/Users/matt/Projects/steak.network/token/contracts/StandardCrowdsale.sol",
           "file": "./StandardCrowdsale.sol",
-          "scope": 183,
+          "scope": 177,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 149,
+        "id": 143,
         "name": "ImportDirective",
         "src": "25:33:3"
       },
@@ -217,13 +217,13 @@
           "SourceUnit": 68,
           "absolutePath": "/Users/matt/Projects/steak.network/token/contracts/CappedCrowdsale.sol",
           "file": "./CappedCrowdsale.sol",
-          "scope": 183,
+          "scope": 177,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 150,
+        "id": 144,
         "name": "ImportDirective",
         "src": "59:31:3"
       },
@@ -237,12 +237,12 @@
           "documentation": "InfiniteCappedCrowdsale is a crowdsale that lasts until either\n1) All tokens up to _cap have been distributed, or\n2) The inevitable heat death of the universe,\nwhichever comes first.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            182,
+            176,
             67,
             816
           ],
           "name": "InfiniteCappedCrowdsale",
-          "scope": 183
+          "scope": 177
         },
         "children": [
           {
@@ -259,12 +259,12 @@
                   "referencedDeclaration": 816,
                   "type": "contract StandardCrowdsale"
                 },
-                "id": 151,
+                "id": 145,
                 "name": "UserDefinedTypeName",
                 "src": "343:17:3"
               }
             ],
-            "id": 152,
+            "id": 146,
             "name": "InheritanceSpecifier",
             "src": "343:17:3"
           },
@@ -282,12 +282,12 @@
                   "referencedDeclaration": 67,
                   "type": "contract CappedCrowdsale"
                 },
-                "id": 153,
+                "id": 147,
                 "name": "UserDefinedTypeName",
                 "src": "362:15:3"
               }
             ],
-            "id": 154,
+            "id": 148,
             "name": "InheritanceSpecifier",
             "src": "362:15:3"
           },
@@ -300,7 +300,7 @@
                   "referencedDeclaration": 911,
                   "type": "library SafeMath"
                 },
-                "id": 155,
+                "id": 149,
                 "name": "UserDefinedTypeName",
                 "src": "390:8:3"
               },
@@ -309,12 +309,12 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 156,
+                "id": 150,
                 "name": "ElementaryTypeName",
                 "src": "403:7:3"
               }
             ],
-            "id": 157,
+            "id": 151,
             "name": "UsingForDirective",
             "src": "384:27:3"
           },
@@ -325,7 +325,7 @@
               "isConstructor": true,
               "name": "InfiniteCappedCrowdsale",
               "payable": false,
-              "scope": 182,
+              "scope": 176,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -337,7 +337,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_cap",
-                      "scope": 181,
+                      "scope": 175,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -350,12 +350,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 158,
+                        "id": 152,
                         "name": "ElementaryTypeName",
                         "src": "618:7:3"
                       }
                     ],
-                    "id": 159,
+                    "id": 153,
                     "name": "VariableDeclaration",
                     "src": "618:12:3"
                   },
@@ -363,7 +363,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_rate",
-                      "scope": 181,
+                      "scope": 175,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -376,12 +376,12 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 160,
+                        "id": 154,
                         "name": "ElementaryTypeName",
                         "src": "632:7:3"
                       }
                     ],
-                    "id": 161,
+                    "id": 155,
                     "name": "VariableDeclaration",
                     "src": "632:13:3"
                   },
@@ -389,7 +389,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "_wallet",
-                      "scope": 181,
+                      "scope": 175,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -402,17 +402,17 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 162,
+                        "id": 156,
                         "name": "ElementaryTypeName",
                         "src": "647:7:3"
                       }
                     ],
-                    "id": 163,
+                    "id": 157,
                     "name": "VariableDeclaration",
                     "src": "647:15:3"
                   }
                 ],
-                "id": 164,
+                "id": 158,
                 "name": "ParameterList",
                 "src": "617:46:3"
               },
@@ -423,7 +423,7 @@
                   ]
                 },
                 "children": [],
-                "id": 179,
+                "id": 173,
                 "name": "ParameterList",
                 "src": "779:0:3"
               },
@@ -439,7 +439,7 @@
                       "type": "type(contract CappedCrowdsale)",
                       "value": "CappedCrowdsale"
                     },
-                    "id": 165,
+                    "id": 159,
                     "name": "Identifier",
                     "src": "672:15:3"
                   },
@@ -449,16 +449,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 159,
+                      "referencedDeclaration": 153,
                       "type": "uint256",
                       "value": "_cap"
                     },
-                    "id": 166,
+                    "id": 160,
                     "name": "Identifier",
                     "src": "688:4:3"
                   }
                 ],
-                "id": 167,
+                "id": 161,
                 "name": "ModifierInvocation",
                 "src": "672:21:3"
               },
@@ -474,7 +474,7 @@
                       "type": "type(contract StandardCrowdsale)",
                       "value": "StandardCrowdsale"
                     },
-                    "id": 168,
+                    "id": 162,
                     "name": "Identifier",
                     "src": "702:17:3"
                   },
@@ -491,7 +491,7 @@
                       "type": "int_const 0",
                       "value": "0"
                     },
-                    "id": 169,
+                    "id": 163,
                     "name": "Literal",
                     "src": "720:1:3"
                   },
@@ -525,7 +525,7 @@
                           "type": "type(uint256)",
                           "value": "uint256"
                         },
-                        "id": 170,
+                        "id": 164,
                         "name": "ElementaryTypeNameExpression",
                         "src": "723:7:3"
                       },
@@ -559,7 +559,7 @@
                               "type": "type(int256)",
                               "value": "int256"
                             },
-                            "id": 171,
+                            "id": 165,
                             "name": "ElementaryTypeNameExpression",
                             "src": "731:6:3"
                           },
@@ -588,22 +588,22 @@
                                   "type": "int_const 1",
                                   "value": "1"
                                 },
-                                "id": 172,
+                                "id": 166,
                                 "name": "Literal",
                                 "src": "739:1:3"
                               }
                             ],
-                            "id": 173,
+                            "id": 167,
                             "name": "UnaryOperation",
                             "src": "738:2:3"
                           }
                         ],
-                        "id": 174,
+                        "id": 168,
                         "name": "FunctionCall",
                         "src": "731:10:3"
                       }
                     ],
-                    "id": 175,
+                    "id": 169,
                     "name": "FunctionCall",
                     "src": "723:19:3"
                   },
@@ -613,11 +613,11 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 161,
+                      "referencedDeclaration": 155,
                       "type": "uint256",
                       "value": "_rate"
                     },
-                    "id": 176,
+                    "id": 170,
                     "name": "Identifier",
                     "src": "744:5:3"
                   },
@@ -627,16 +627,16 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 163,
+                      "referencedDeclaration": 157,
                       "type": "address",
                       "value": "_wallet"
                     },
-                    "id": 177,
+                    "id": 171,
                     "name": "Identifier",
                     "src": "751:7:3"
                   }
                 ],
-                "id": 178,
+                "id": 172,
                 "name": "ModifierInvocation",
                 "src": "702:57:3"
               },
@@ -647,22 +647,22 @@
                   ]
                 },
                 "children": [],
-                "id": 180,
+                "id": 174,
                 "name": "Block",
                 "src": "779:8:3"
               }
             ],
-            "id": 181,
+            "id": 175,
             "name": "FunctionDefinition",
             "src": "585:202:3"
           }
         ],
-        "id": 182,
+        "id": 176,
         "name": "ContractDefinition",
         "src": "307:482:3"
       }
     ],
-    "id": 183,
+    "id": 177,
     "name": "SourceUnit",
     "src": "0:790:3"
   },
@@ -672,5 +672,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-16T12:36:49.866Z"
+  "updatedAt": "2017-11-17T13:06:11.260Z"
 }

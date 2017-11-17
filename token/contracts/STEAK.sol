@@ -4,6 +4,11 @@ import 'zeppelin-solidity/contracts/token/StandardToken.sol';
 
 // heavily inspired by https://github.com/RequestNetwork/RequestTokenSale/blob/master/contracts/RequestToken.sol
 contract STEAK is StandardToken {
+
+    uint256 public initialSupply;
+    // the original supply, just for posterity, since totalSupply
+    //  will decrement on burn
+
     string public constant name   = "$TEAK";
     string public constant symbol = "$TEAK";
     // ^ whether or not to include the `$` here will probably be contested
@@ -23,9 +28,10 @@ contract STEAK is StandardToken {
     function STEAK(uint tokenTotalAmount)
     public
     {
-        // Mint all tokens to crowdsale. Then disable minting forever.
-        totalSupply = tokenTotalAmount * (10 ** uint256(decimals));
+        initialSupply = tokenTotalAmount * (10 ** uint256(decimals));
+        totalSupply = initialSupply;
 
+        // Mint all tokens to crowdsale.
         balances[msg.sender] = totalSupply;
         Transfer(address(0x0), msg.sender, totalSupply);
 
