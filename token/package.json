@@ -10,7 +10,9 @@
   "author": "Matt Condon <m@cond.in> (http://mat.tc)",
   "license": "ISC",
   "dependencies": {
-    "truffle": "^4.0.1"
+    "dotenv": "^4.0.0",
+    "truffle": "^4.0.1",
+    "truffle-hdwallet-provider": "0.0.3"
   },
   "devDependencies": {
     "bignumber.js": "^4.1.0",
