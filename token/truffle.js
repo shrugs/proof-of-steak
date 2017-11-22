@@ -3,17 +3,17 @@ module.exports = {
     useColors: true
   },
   networks: {
+    ropsten: {
+      host: 'localhost',
+      port: 8545,
+      network_id: '*'
+    },
     testrpc: {
       host: 'localhost',
       port: 8545,
       network_id: '*'
     },
-    dev: {
-      host: 'localhost',
-      port: 7545,
-      network_id: '*'
-    },
-    test: {
+    ganache: {
       host: 'localhost',
       port: 7545,
       network_id: '*'
