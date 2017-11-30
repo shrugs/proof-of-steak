@@ -14,4 +14,4 @@
 
 *Proof of Steak* is a real protocol that uses Proof of Stake and the TrueBit Classic protocol to create a curated registry. For the *Steak Network*, that registry is of a bunch of pictures of steaks.
 
-[Please read the whitepaper a put a lot of work into it](steak-network_whitepaper.pdf).
+[Please read the whitepaper I put a lot of work into it](steak-network_whitepaper.pdf).
