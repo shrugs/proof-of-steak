@@ -15,9 +15,18 @@ module.exports = {
   networks: {
     mainnet: {
       provider: provider('mainnet'),
+      network_id: 1,
+      gas: 6750000
     },
     ropsten: {
       provider: provider('ropsten'),
+      network_id: 3,
+      gas: 4712433
+    },
+    rinkeby: {
+      provider: provider('rinkeby'),
+      network_id: 4,
+      gas: 6750000,
     },
     testrpc: {
       host: 'localhost',
