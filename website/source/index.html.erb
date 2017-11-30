@@ -236,11 +236,11 @@
                 <p>Literally just send
                     <code>ETH</code> to this address and we'll give you some
                     <code>$TEAK</code>:</p>
+                <code class="donation-address"><%= donation_address %></code>
                 <p>
                     <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction">Send a transaction to
                         <%= donation_address %> via MyEtherWallet</a>
                 </p>
-                <code class="donation-address"><%= donation_address %></code>
                 <p class="help-text">✔️ I understand that I get $TEAK Tokens worth literally nothing in exchange for sending ETH to this address.</p>
                 <p class="help-text">✔️ Delivered rare, medium-rare, or Pittsburgh-style.</p>
                 <p class="help-text">✔️ All ETH is forwarded to the projects below.</p>
@@ -263,8 +263,14 @@
     <div class="row align-center last-item-in-section">
         <div class="small-10 columns">
             <p>
-                What is the Dog-Eth Art Project? It's a community-organized effort to build an IRL art project illustrating the Doge-Ethereum
+                What is the Doge-Eth Art Project? It's a community-organized effort to build an IRL art project illustrating the Doge-Ethereum
                 bridge being developed by TrueBit. Join our Slack channel to contribute to the discussion!
+            </p>
+            <p>
+                Here's the
+                <a href="https://etherscan.io/address/0x388a037ab169b128e70cf67e1228ecd03f0400f2">DonationSplitter contract on Etherscan</a> as well as the
+                <a href="https://etherscan.io/address/0x1debc6427df10a3193553382ec3cab99f9d702f3">ICS contract on Etherscan</a> and the
+                <a href="https://etherscan.io/token/0x7dd7f56d697cc0f2b52bd55c057f378f1fe6ab4b">$TEAK Token contract on Etherscan</a>.
             </p>
         </div>
     </div>
@@ -301,42 +307,37 @@
         </div>
     </div>
     <div class="row align-center">
-        <%# partial 'partials/person', locals: {
-            img: '/images/naval.jpg',
-            name: 'Naval Ravikant',
-            desc: 'Naval is the CEO and a co-founder of <strike>AngelList</strike> SteakList. He previously co-founded Steak-pinions and shares our love of steak-based social networks.',
-        } %>
-            <%= partial 'partials/person', locals: {
+        <%= partial 'partials/person', locals: {
             img: '/images/rzurrer.jpg',
             name: 'Ryan Zurrer',
             desc: 'Principal & Venture Partner @ <strike>Polychain</strike> <b>Steakchain Capital</b>. Helping build great token-enabled #blockchain networks (like the Steak Network).',
         } %>
-                <%= partial 'partials/person', locals: {
+            <%= partial 'partials/person', locals: {
             img: '/images/linda.jpg',
             name: 'Linda Xie',
             desc: 'Co-founder @ScalarCapital. Previously Product Manager @Coinbase. Advisor @0xProject. Author of the extremely popular <a href="https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf">Beginners Guide to the Steak Network</a> article.',
         } %>
-                    <%= partial 'partials/person', locals: {
+                <%= partial 'partials/person', locals: {
             img: '/images/mike.jpg',
             name: 'Michael Karnjanaprakorn',
             desc: 'Michael is all about sharing <strike>skills</strike> steaks. Investor @ Turing Boyz 2 Mignon',
         } %>
-                        <%= partial 'partials/person', locals: {
+                    <%= partial 'partials/person', locals: {
             img: '/images/metastable.png',
             name: 'Lucas Ryan',
             desc: 'Lucas is a partner at MetaStable Capital, the premier backyard barbeque hedge-related fund.',
         } %>
-                            <%= partial 'partials/person', locals: {
+                        <%= partial 'partials/person', locals: {
             img: '/images/alex.jpg',
             name: 'Alex Lines',
             desc: 'Alex is a partner at Notation Capital where he helps technical founders turn their steaks into valuable $TEAK Tokens.',
         } %>
-                                <%= partial 'partials/person', locals: {
+                            <%= partial 'partials/person', locals: {
             img: '/images/nicholas.jpeg',
             name: 'Nicholas Chirls',
             desc: 'Nicholas is a partner at Notation Capital and previously Head of Steak Investments at Betaworks. Steaklyn born and braised.',
         } %>
-                                    <%= partial 'partials/person', locals: {
+                                <%= partial 'partials/person', locals: {
             img: '/images/josh.jpg',
             name: 'Josh Nussbaum',
             desc: 'Josh is a partner at Compound, an NYC based VC firm that invests in <strike>early stage</strike> rare technology companies.',
@@ -470,7 +471,7 @@
                 <code class="donation-address"><%= personal_address %></code>
                 <p>
                     <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction">Send a transaction to
-                        <%= personal_address %> via MyEtherWallet</a>
+                        <%= personal_address %> via MyEtherWallet</ability>
                 </p>
                 <p class="help-text">✔️ This money goes directly to me.</p>
                 <p class="help-text">✔️ I promise to spend it on stupid things like food, housing, and more dumb projects.</p>

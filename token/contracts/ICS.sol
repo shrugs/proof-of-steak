@@ -10,7 +10,7 @@ contract ICS is InfiniteCappedCrowdsale {
     // ^ arbitrary valuation of ~$10k
     uint256 public constant ETH_TO_WEI = (10 ** 18);
     uint256 public constant TOKEN_RATE = (TOTAL_SUPPLY / ARBITRARY_VALUATION_IN_ETH);
-    // ^ 2.9552121212e+28 grains per wei == 2.955e10 $TEAK per eth == 2.955e-8 per wei
+    // 29552121212 $TEAK per wei
 
 
     function ICS(address _wallet)

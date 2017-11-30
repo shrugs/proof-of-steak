@@ -15,7 +15,7 @@ setTimeout(() => {
 new Chart(document.getElementById('ics-distribution'), {
   type: 'pie',
   data: {
-    labels: ['The Ethereum Foundation', 'The Dog-Eth Art Project', 'MyEtherWallet', 'Crypto Kitties'],
+    labels: ['The Ethereum Foundation', 'The Doge-Eth Art Project', 'MyEtherWallet', 'Crypto Kitties'],
     datasets: [{
       borderColor: '#f4f1de',
       backgroundColor: ['#ab544b', '#ad4d43', '#b3665d', '#ad4d43'],
