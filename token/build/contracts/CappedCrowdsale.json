@@ -192,7 +192,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 912,
+          "SourceUnit": 642,
           "absolutePath": "zeppelin-solidity/contracts/math/SafeMath.sol",
           "file": "zeppelin-solidity/contracts/math/SafeMath.sol",
           "scope": 68,
@@ -207,7 +207,7 @@
       },
       {
         "attributes": {
-          "SourceUnit": 817,
+          "SourceUnit": 544,
           "absolutePath": "/Users/matt/Projects/steak.network/token/contracts/StandardCrowdsale.sol",
           "file": "./StandardCrowdsale.sol",
           "scope": 68,
@@ -223,14 +223,14 @@
       {
         "attributes": {
           "contractDependencies": [
-            816
+            543
           ],
           "contractKind": "contract",
           "documentation": "@title CappedCrowdsale\n@dev Extension of Crowdsale with a max amount of funds raised",
           "fullyImplemented": false,
           "linearizedBaseContracts": [
             67,
-            816
+            543
           ],
           "name": "CappedCrowdsale",
           "scope": 68
@@ -247,7 +247,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "StandardCrowdsale",
-                  "referencedDeclaration": 816,
+                  "referencedDeclaration": 543,
                   "type": "contract StandardCrowdsale"
                 },
                 "id": 4,
@@ -265,7 +265,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SafeMath",
-                  "referencedDeclaration": 911,
+                  "referencedDeclaration": 641,
                   "type": "library SafeMath"
                 },
                 "id": 6,
@@ -402,7 +402,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1306,
+                              "referencedDeclaration": 1060,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -544,7 +544,7 @@
               "payable": false,
               "scope": 67,
               "stateMutability": "nonpayable",
-              "superFunction": 795,
+              "superFunction": 522,
               "visibility": "internal"
             },
             "children": [
@@ -670,8 +670,8 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "add",
-                                  "referencedDeclaration": 910,
-                                  "type": "function (uint256,uint256) view returns (uint256)"
+                                  "referencedDeclaration": 640,
+                                  "type": "function (uint256,uint256) pure returns (uint256)"
                                 },
                                 "children": [
                                   {
@@ -680,7 +680,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 634,
+                                      "referencedDeclaration": 361,
                                       "type": "uint256",
                                       "value": "weiRaised"
                                     },
@@ -711,7 +711,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1303,
+                                      "referencedDeclaration": 1057,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -801,7 +801,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "validPurchase",
-                                  "referencedDeclaration": 795,
+                                  "referencedDeclaration": 522,
                                   "type": "function () returns (bool)"
                                 },
                                 "children": [
@@ -811,7 +811,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1327,
+                                      "referencedDeclaration": 1081,
                                       "type": "contract super CappedCrowdsale",
                                       "value": "super"
                                     },
@@ -875,7 +875,7 @@
               "payable": false,
               "scope": 67,
               "stateMutability": "view",
-              "superFunction": 805,
+              "superFunction": 532,
               "visibility": "public"
             },
             "children": [
@@ -979,7 +979,7 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 634,
+                              "referencedDeclaration": 361,
                               "type": "uint256",
                               "value": "weiRaised"
                             },
@@ -1059,7 +1059,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "hasEnded",
-                                  "referencedDeclaration": 805,
+                                  "referencedDeclaration": 532,
                                   "type": "function () view returns (bool)"
                                 },
                                 "children": [
@@ -1069,7 +1069,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 1327,
+                                      "referencedDeclaration": 1081,
                                       "type": "contract super CappedCrowdsale",
                                       "value": "super"
                                     },
@@ -1137,5 +1137,5 @@
   },
   "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-17T13:06:11.259Z"
+  "updatedAt": "2017-11-30T12:35:53.444Z"
 }

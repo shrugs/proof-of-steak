@@ -96,6 +96,9 @@
       "type": "function"
     },
     {
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
       "inputs": [
         {
           "name": "_payees",
@@ -105,10 +108,7 @@
           "name": "_shares",
           "type": "uint256[]"
         }
-      ],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
+      ]
     },
     {
       "payable": true,
@@ -116,18 +116,18 @@
       "type": "fallback"
     }
   ],
-  "bytecode": "0x",
-  "deployedBytecode": "0x",
-  "sourceMap": "",
-  "deployedSourceMap": "",
-  "source": "pragma solidity 0.4.18;\n\nimport 'zeppelin-solidity/contracts/payment/SplitPayment.sol';\n\ncontract DonationSplitter is SplitPayment {}\n",
+  "bytecode": "0x6060604052600080556000600155341561001857600080fd5b6040516109d53803806109d583398101604052808051820191906020018051820191905050818160008151835114151561005157600080fd5b600090505b82518110156100b7576100aa838281518110151561007057fe5b90602001906020020151838381518110151561008857fe5b906020019060200201516100c16401000000000261054e176401000000009004565b8080600101915050610056565b505050505061029c565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff16141515156100fd57600080fd5b60008111151561010c57600080fd5b6000600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414151561015a57600080fd5b6004805480600101828161016e919061024b565b9160005260206000209001600084909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505080600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055506102238160005461022d640100000000026104c1179091906401000000009004565b6000819055505050565b600080828401905083811015151561024157fe5b8091505092915050565b815481835581811511610272578183600052602060002091820191016102719190610277565b5b505050565b61029991905b8082111561029557600081600090555060010161027d565b5090565b90565b61072a806102ab6000396000f300606060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633a98ef391461007a5780634e71d92d146100a357806363037b0c146100b85780639852595c1461011b578063ce7c2ac214610168578063e33b7de3146101b5575b005b341561008557600080fd5b61008d6101de565b6040518082815260200191505060405180910390f35b34156100ae57600080fd5b6100b66101e4565b005b34156100c357600080fd5b6100d9600480803590602001909190505061044c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561012657600080fd5b610152600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061048b565b6040518082815260200191505060405180910390f35b341561017357600080fd5b61019f600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104a3565b6040518082815260200191505060405180910390f35b34156101c057600080fd5b6101c86104bb565b6040518082815260200191505060405180910390f35b60005481565b60008060003392506000600260008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205411151561023a57600080fd5b6102666001543073ffffffffffffffffffffffffffffffffffffffff16316104c190919063ffffffff16565b915061031f600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610311600054610303600260008973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054876104df90919063ffffffff16565b61051a90919063ffffffff16565b61053590919063ffffffff16565b90506000811415151561033157600080fd5b803073ffffffffffffffffffffffffffffffffffffffff16311015151561035757600080fd5b6103a981600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546104c190919063ffffffff16565b600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550610401816001546104c190919063ffffffff16565b6001819055508273ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f19350505050151561044757600080fd5b505050565b60048181548110151561045b57fe5b90600052602060002090016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60036020528060005260406000206000915090505481565b60026020528060005260406000206000915090505481565b60015481565b60008082840190508381101515156104d557fe5b8091505092915050565b60008060008414156104f45760009150610513565b828402905082848281151561050557fe5b0414151561050f57fe5b8091505b5092915050565b600080828481151561052857fe5b0490508091505092915050565b600082821115151561054357fe5b818303905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561058a57600080fd5b60008111151561059957600080fd5b6000600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541415156105e757600080fd5b600480548060010182816105fb91906106ad565b9160005260206000209001600084909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505080600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055506106a3816000546104c190919063ffffffff16565b6000819055505050565b8154818355818115116106d4578183600052602060002091820191016106d391906106d9565b5b505050565b6106fb91905b808211156106f75760008160009055506001016106df565b5090565b905600a165627a7a72305820c3e6d0d113aecd434ffe0870c5d135f013e05f368f86fb789d7069ea776cc5120029",
+  "deployedBytecode": "0x606060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633a98ef391461007a5780634e71d92d146100a357806363037b0c146100b85780639852595c1461011b578063ce7c2ac214610168578063e33b7de3146101b5575b005b341561008557600080fd5b61008d6101de565b6040518082815260200191505060405180910390f35b34156100ae57600080fd5b6100b66101e4565b005b34156100c357600080fd5b6100d9600480803590602001909190505061044c565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561012657600080fd5b610152600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061048b565b6040518082815260200191505060405180910390f35b341561017357600080fd5b61019f600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506104a3565b6040518082815260200191505060405180910390f35b34156101c057600080fd5b6101c86104bb565b6040518082815260200191505060405180910390f35b60005481565b60008060003392506000600260008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205411151561023a57600080fd5b6102666001543073ffffffffffffffffffffffffffffffffffffffff16316104c190919063ffffffff16565b915061031f600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054610311600054610303600260008973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054876104df90919063ffffffff16565b61051a90919063ffffffff16565b61053590919063ffffffff16565b90506000811415151561033157600080fd5b803073ffffffffffffffffffffffffffffffffffffffff16311015151561035757600080fd5b6103a981600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546104c190919063ffffffff16565b600360008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550610401816001546104c190919063ffffffff16565b6001819055508273ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f19350505050151561044757600080fd5b505050565b60048181548110151561045b57fe5b90600052602060002090016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60036020528060005260406000206000915090505481565b60026020528060005260406000206000915090505481565b60015481565b60008082840190508381101515156104d557fe5b8091505092915050565b60008060008414156104f45760009150610513565b828402905082848281151561050557fe5b0414151561050f57fe5b8091505b5092915050565b600080828481151561052857fe5b0490508091505092915050565b600082821115151561054357fe5b818303905092915050565b600073ffffffffffffffffffffffffffffffffffffffff168273ffffffffffffffffffffffffffffffffffffffff161415151561058a57600080fd5b60008111151561059957600080fd5b6000600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541415156105e757600080fd5b600480548060010182816105fb91906106ad565b9160005260206000209001600084909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505080600260008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055506106a3816000546104c190919063ffffffff16565b6000819055505050565b8154818355818115116106d4578183600052602060002091820191016106d391906106d9565b5b505050565b6106fb91905b808211156106f75760008160009055506001016106df565b5090565b905600a165627a7a72305820c3e6d0d113aecd434ffe0870c5d135f013e05f368f86fb789d7069ea776cc5120029",
+  "sourceMap": "89:236:0:-;;;306:1:2;277:30;;342:1;311:32;;137:131:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;223:7;232;628:9:2;601:7;:14;583:7;:14;:32;575:41;;;;;;;;640:1;628:13;;623:92;647:7;:14;643:1;:18;623:92;;;676:32;685:7;693:1;685:10;;;;;;;;;;;;;;;;;;697:7;705:1;697:10;;;;;;;;;;;;;;;;;;676:8;;;;;:32;;;:::i;:::-;663:3;;;;;;;623:92;;;502:217;;;137:131:0;;89:236;;891:260:2;983:1;965:20;;:6;:20;;;;957:29;;;;;;;;1010:1;1000:7;:11;992:20;;;;;;;;1044:1;1026:6;:14;1033:6;1026:14;;;;;;;;;;;;;;;;:19;1018:28;;;;;;;;1053:6;:19;;;;;;;;;;;:::i;:::-;;;;;;;;;;1065:6;1053:19;;;;;;;;;;;;;;;;;;;;;;;1095:7;1078:6;:14;1085:6;1078:14;;;;;;;;;;;;;;;:24;;;;1122;1138:7;1122:11;;:15;;;;;;:24;;;;;:::i;:::-;1108:11;:38;;;;891:260;;:::o;698:129:1:-;756:7;771:9;787:1;783;:5;771:17;;806:1;801;:6;;794:14;;;;;;821:1;814:8;;698:129;;;;;:::o;89:236:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "89:236:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;277:30:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1210:447;;;;;;;;;;;;;;440:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;393:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;348:41;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;311:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;277:30;;;;:::o;1210:447::-;1240:13;1306:21;1367:15;1256:10;1240:26;;1297:1;1281:6;:13;1288:5;1281:13;;;;;;;;;;;;;;;;:17;1273:26;;;;;;;;1330:31;1347:13;;1330:4;:12;;;:16;;:31;;;;:::i;:::-;1306:55;;1385:70;1439:8;:15;1448:5;1439:15;;;;;;;;;;;;;;;;1385:49;1422:11;;1385:32;1403:6;:13;1410:5;1403:13;;;;;;;;;;;;;;;;1385;:17;;:32;;;;:::i;:::-;:36;;:49;;;;:::i;:::-;:53;;:70;;;;:::i;:::-;1367:88;;1481:1;1470:7;:12;;1462:21;;;;;;;;1513:7;1497:4;:12;;;:23;;1489:32;;;;;;;;1546:28;1566:7;1546:8;:15;1555:5;1546:15;;;;;;;;;;;;;;;;:19;;:28;;;;:::i;:::-;1528:8;:15;1537:5;1528:15;;;;;;;;;;;;;;;:46;;;;1596:26;1614:7;1596:13;;:17;;:26;;;;:::i;:::-;1580:13;:42;;;;1629:5;:14;;:23;1644:7;1629:23;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1210:447;;;:::o;440:23::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;393:43::-;;;;;;;;;;;;;;;;;:::o;348:41::-;;;;;;;;;;;;;;;;;:::o;311:32::-;;;;:::o;698:129:1:-;756:7;771:9;787:1;783;:5;771:17;;806:1;801;:6;;794:14;;;;;;821:1;814:8;;698:129;;;;;:::o;138:173::-;196:7;251:9;220:1;215;:6;211:35;;;238:1;231:8;;;;211:35;267:1;263;:5;251:17;;290:1;285;281;:5;;;;;;;;:10;274:18;;;;;;305:1;298:8;;138:173;;;;;;:::o;315:265::-;373:7;462:9;478:1;474;:5;;;;;;;;462:17;;574:1;567:8;;315:265;;;;;:::o;584:110::-;642:7;669:1;664;:6;;657:14;;;;;;688:1;684;:5;677:12;;584:110;;;;:::o;891:260:2:-;983:1;965:20;;:6;:20;;;;957:29;;;;;;;;1010:1;1000:7;:11;992:20;;;;;;;;1044:1;1026:6;:14;1033:6;1026:14;;;;;;;;;;;;;;;;:19;1018:28;;;;;;;;1053:6;:19;;;;;;;;;;;:::i;:::-;;;;;;;;;;1065:6;1053:19;;;;;;;;;;;;;;;;;;;;;;;1095:7;1078:6;:14;1085:6;1078:14;;;;;;;;;;;;;;;:24;;;;1122;1138:7;1122:11;;:15;;:24;;;;:::i;:::-;1108:11;:38;;;;891:260;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity 0.4.18;\n\nimport 'zeppelin-solidity/contracts/payment/SplitPayment.sol';\n\ncontract DonationSplitter is SplitPayment {\n    function DonationSplitter (address[] _payees, uint256[] _shares)\n        SplitPayment(_payees, _shares)\n        public\n    {\n\n    }\n\n    // accept ether\n    function () public payable {}\n}\n",
   "sourcePath": "/Users/matt/Projects/steak.network/token/contracts/DonationSplitter.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/Users/matt/Projects/steak.network/token/contracts/DonationSplitter.sol",
       "exportedSymbols": {
         "DonationSplitter": [
-          5
+          23
         ]
       }
     },
@@ -146,10 +146,10 @@
       },
       {
         "attributes": {
-          "SourceUnit": 296,
+          "SourceUnit": 314,
           "absolutePath": "zeppelin-solidity/contracts/payment/SplitPayment.sol",
           "file": "zeppelin-solidity/contracts/payment/SplitPayment.sol",
-          "scope": 6,
+          "scope": 24,
           "symbolAliases": [
             null
           ],
@@ -162,20 +162,20 @@
       {
         "attributes": {
           "contractDependencies": [
-            295
+            313
           ],
           "contractKind": "contract",
           "documentation": null,
-          "fullyImplemented": false,
+          "fullyImplemented": true,
           "linearizedBaseContracts": [
-            5,
-            295
+            23,
+            313
           ],
           "name": "DonationSplitter",
-          "scope": 6,
           "nodes": [
             null
-          ]
+          ],
+          "scope": 24
         },
         "children": [
           {
@@ -189,7 +189,7 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "SplitPayment",
-                  "referencedDeclaration": 295,
+                  "referencedDeclaration": 313,
                   "type": "contract SplitPayment"
                 },
                 "id": 3,
@@ -206,21 +206,29 @@
               "constant": false,
               "implemented": true,
               "isConstructor": true,
+              "modifiers": [
+                null
+              ],
               "name": "DonationSplitter",
               "payable": false,
-              "scope": 91,
+              "scope": 23,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
             },
             "children": [
               {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
                 "children": [
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_payees",
-                      "scope": 86,
+                      "scope": 18,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address[] memory",
@@ -239,25 +247,25 @@
                               "name": "address",
                               "type": "address"
                             },
-                            "id": 73,
+                            "id": 5,
                             "name": "ElementaryTypeName",
-                            "src": "130:7:1"
+                            "src": "164:7:0"
                           }
                         ],
-                        "id": 74,
+                        "id": 6,
                         "name": "ArrayTypeName",
-                        "src": "130:9:1"
+                        "src": "164:9:0"
                       }
                     ],
-                    "id": 75,
+                    "id": 7,
                     "name": "VariableDeclaration",
-                    "src": "130:17:1"
+                    "src": "164:17:0"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "_shares",
-                      "scope": 86,
+                      "scope": 18,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256[] memory",
@@ -276,24 +284,24 @@
                               "name": "uint256",
                               "type": "uint256"
                             },
-                            "id": 76,
+                            "id": 8,
                             "name": "ElementaryTypeName",
-                            "src": "149:7:1"
+                            "src": "183:7:0"
                           }
                         ],
-                        "id": 77,
+                        "id": 9,
                         "name": "ArrayTypeName",
-                        "src": "149:9:1"
+                        "src": "183:9:0"
                       }
                     ],
-                    "id": 78,
+                    "id": 10,
                     "name": "VariableDeclaration",
-                    "src": "149:17:1"
+                    "src": "183:17:0"
                   }
                 ],
-                "id": 79,
+                "id": 11,
                 "name": "ParameterList",
-                "src": "129:38:1"
+                "src": "163:38:0"
               },
               {
                 "attributes": {
@@ -302,11 +310,16 @@
                   ]
                 },
                 "children": [],
-                "id": 84,
+                "id": 16,
                 "name": "ParameterList",
-                "src": "226:0:1"
+                "src": "260:0:0"
               },
               {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
                 "children": [
                   {
                     "attributes": {
@@ -314,13 +327,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 615,
+                      "referencedDeclaration": 313,
                       "type": "type(contract SplitPayment)",
                       "value": "SplitPayment"
                     },
-                    "id": 80,
+                    "id": 12,
                     "name": "Identifier",
-                    "src": "176:12:1"
+                    "src": "210:12:0"
                   },
                   {
                     "attributes": {
@@ -328,13 +341,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 75,
+                      "referencedDeclaration": 7,
                       "type": "address[] memory",
                       "value": "_payees"
                     },
-                    "id": 81,
+                    "id": 13,
                     "name": "Identifier",
-                    "src": "189:7:1"
+                    "src": "223:7:0"
                   },
                   {
                     "attributes": {
@@ -342,18 +355,18 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 78,
+                      "referencedDeclaration": 10,
                       "type": "uint256[] memory",
                       "value": "_shares"
                     },
-                    "id": 82,
+                    "id": 14,
                     "name": "Identifier",
-                    "src": "198:7:1"
+                    "src": "232:7:0"
                   }
                 ],
-                "id": 83,
+                "id": 15,
                 "name": "ModifierInvocation",
-                "src": "176:30:1"
+                "src": "210:30:0"
               },
               {
                 "attributes": {
@@ -362,14 +375,14 @@
                   ]
                 },
                 "children": [],
-                "id": 85,
+                "id": 17,
                 "name": "Block",
-                "src": "226:8:1"
+                "src": "260:8:0"
               }
             ],
-            "id": 86,
+            "id": 18,
             "name": "FunctionDefinition",
-            "src": "103:131:1"
+            "src": "137:131:0"
           },
           {
             "attributes": {
@@ -381,7 +394,7 @@
               ],
               "name": "",
               "payable": true,
-              "scope": 91,
+              "scope": 23,
               "stateMutability": "payable",
               "superFunction": null,
               "visibility": "public"
@@ -394,9 +407,9 @@
                   ]
                 },
                 "children": [],
-                "id": 87,
+                "id": 19,
                 "name": "ParameterList",
-                "src": "269:2:1"
+                "src": "303:2:0"
               },
               {
                 "attributes": {
@@ -405,9 +418,9 @@
                   ]
                 },
                 "children": [],
-                "id": 88,
+                "id": 20,
                 "name": "ParameterList",
-                "src": "280:0:1"
+                "src": "321:0:0"
               },
               {
                 "attributes": {
@@ -416,36 +429,30 @@
                   ]
                 },
                 "children": [],
-                "id": 89,
+                "id": 21,
                 "name": "Block",
-                "src": "280:2:1"
+                "src": "321:2:0"
               }
             ],
-            "id": 90,
+            "id": 22,
             "name": "FunctionDefinition",
-            "src": "260:22:1"
+            "src": "294:29:0"
           }
         ],
-        "id": 5,
+        "id": 23,
         "name": "ContractDefinition",
-        "src": "89:44:0"
+        "src": "89:236:0"
       }
     ],
-    "id": 6,
+    "id": 24,
     "name": "SourceUnit",
-    "src": "0:134:0"
+    "src": "0:326:0"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10"
-    }
-  },
+  "networks": {},
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-30T10:54:28.588Z"
+  "updatedAt": "2017-11-30T11:53:04.126Z"
 }

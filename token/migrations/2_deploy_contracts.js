@@ -1,5 +1,5 @@
-var DonationSplitter = artifacts.require('./DonationSplitter')
-var ICS = artifacts.require('./ICS')
+const DonationSplitter = artifacts.require('./SplitPayment')
+const ICS = artifacts.require('./ICS')
 
 const addresses = [
   '0x23e0619E5339184cF21Ad78a3fEdE6C4D12Bc467', // The Ethereum Foundation (notes below)
