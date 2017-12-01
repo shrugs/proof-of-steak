@@ -225,7 +225,7 @@
     </div>
     <div class="row align-center">
         <div class="small-12 columns ics-info-container">
-            <h3 class="text-center">We're raising 33 ETH (≈$10,000) in donations</h3>
+            <h3 class="text-center">We're raising 33 ETH (≈<strike>$10,000</strike> $14,000) in donations</h3>
             <span class="total-supply">975,220,000,000</span>
             <span class="help-text">Total Supply of $TEAK</span>
         </div>
@@ -238,7 +238,7 @@
                     <code>$TEAK</code>:</p>
                 <code class="donation-address"><%= donation_address %></code>
                 <p>
-                    <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction">Send a transaction to
+                    <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction" class="address-within">Send a transaction to
                         <%= donation_address %> via MyEtherWallet</a>
                 </p>
                 <p class="help-text">✔️ I understand that I get $TEAK Tokens worth literally nothing in exchange for sending ETH to this address.</p>
@@ -470,7 +470,7 @@
                     <code>ETH</code> or your favorite shitcoin to this address:</p>
                 <code class="donation-address"><%= personal_address %></code>
                 <p>
-                    <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction">Send a transaction to
+                    <a href="https://www.myetherwallet.com/?to=<%= donation_address %>#send-transaction" class="address-within">Send a transaction to
                         <%= personal_address %> via MyEtherWallet</ability>
                 </p>
                 <p class="help-text">✔️ This money goes directly to me.</p>
@@ -479,6 +479,12 @@
         </div>
     </div>
     <%= partial 'partials/whitepaper_cta', locals: { sub: '(last chance!!! only one call to action left!!! click now!!!)', button_type: 'primary' } %>
+
+    <div class="row align-center">
+        <div class="small-10 columns">
+            <%= partial 'partials/newsletter' %>
+        </div>
+    </div>
 </section>
 
 <div class="overlay egg-container-container-container max-it">

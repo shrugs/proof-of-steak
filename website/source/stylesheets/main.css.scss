@@ -342,6 +342,10 @@ section {
   }
 }
 
+.address-within {
+  word-wrap: break-word;
+}
+
 footer {
   background-color: $secondary-color;
   color: $primary-color;
