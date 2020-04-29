@@ -11,7 +11,7 @@
   "dependencies": {
     "chart.js": "^2.7.0",
     "foundation-sites": "^6.4.3",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "particles.js": "git://github.com/Saturate/particles.js.git#patch-1"
   },
   "devDependencies": {
